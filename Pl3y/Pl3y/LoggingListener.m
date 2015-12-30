@@ -61,19 +61,11 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:horsesShoeNotification object:packet.values];
             break;
         case IXNMuseDataPacketTypeAlphaRelative:
-            [[NSNotificationCenter defaultCenter] postNotificationName:alphaNotification object:packet.values];
-            break;
         case IXNMuseDataPacketTypeBetaRelative:
-            [[NSNotificationCenter defaultCenter] postNotificationName:betaNotification object:packet.values];
-            break;
         case IXNMuseDataPacketTypeDeltaRelative:
-            [[NSNotificationCenter defaultCenter] postNotificationName:deltaNotification object:packet.values];
-            break;
         case IXNMuseDataPacketTypeThetaRelative:
-            [[NSNotificationCenter defaultCenter] postNotificationName:thetaNotification object:packet.values];
-            break;
         case IXNMuseDataPacketTypeGammaRelative:
-            [[NSNotificationCenter defaultCenter] postNotificationName:gammaNotification object:packet.values];
+            [[NSNotificationCenter defaultCenter] postNotificationName:dataNotification object:packet];
             break;
         default:
             break;

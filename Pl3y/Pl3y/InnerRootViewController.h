@@ -10,4 +10,6 @@
 
 @interface InnerRootViewController : UIViewController
 
++ (void)initMuseWithListener:(NSArray *)listeners;
+
 @end

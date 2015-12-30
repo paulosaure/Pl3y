@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExperimentViewController : UIViewController
+@interface ExperimentViewController : InnerRootViewController
 
 @end

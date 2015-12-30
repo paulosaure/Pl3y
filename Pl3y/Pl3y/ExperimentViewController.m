@@ -8,9 +8,10 @@
 
 #import "ExperimentViewController.h"
 #import "MuseController.h"
-#define mellowNotification          @"mellowNotification"
 
-@interface ExperimentViewController ()
+@import Charts;
+
+@interface ExperimentViewController () <ChartViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *mellowLabel;
 
@@ -25,17 +26,19 @@
     
     self.mellowLabel.textColor = [UIColor blueColor];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
+    // Init listener
+    NSArray *listenedObjects = @[ @(IXNMuseDataPacketTypeAlphaRelative),
+                                  @(IXNMuseDataPacketTypeBetaRelative),
+                                  @(IXNMuseDataPacketTypeDeltaRelative),
+                                  @(IXNMuseDataPacketTypeGammaRelative),
+                                  @(IXNMuseDataPacketTypeThetaRelative)
+                                ];
+    [InnerRootViewController initMuseWithListener:listenedObjects];
     
-    MuseController *muse = [[MuseController alloc] init];
-    
-    NSMutableArray *listenedObjects = [NSMutableArray array];
-        [listenedObjects addObject:@(IXNMuseDataPacketTypeMellow)];
-    muse.listenedObjects = listenedObjects;
-    [muse resumeInstance];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handledataNotification:) name:dataNotification object:nil];
 }
 
-- (void)handleMellowNotification:(NSNotification*)note
+- (void)handledataNotification:(NSNotification*)note
 {
     NSArray *packet = note.object;
     NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
@@ -44,7 +47,9 @@
     
     self.mellowLabel.text = [NSString stringWithFormat:@"Mellow : %f", floatValue];
     
-    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
+
 }
+
+
 
 @end

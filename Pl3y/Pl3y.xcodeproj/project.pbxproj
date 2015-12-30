@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5401E0381A93DA2600FADC22 /* MuseStatsIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401E0371A93DA2600FADC22 /* MuseStatsIosTests.m */; };
+		698B046D36E303AA3ABFBAA4 /* Pods_Pl3y.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D80E06800889378D389368 /* Pods_Pl3y.framework */; };
+		A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A837744D1C33F3F90069B6A6 /* Charts.framework */; };
+		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
 		A8C799211C317C7500D29177 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C799201C317C7500D29177 /* libMuse.a */; };
-		A8F67B721C33DF34004FB5C6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8F67B6F1C33DF34004FB5C6 /* Info.plist */; };
 		A8F67B731C33DF34004FB5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B701C33DF34004FB5C6 /* main.m */; };
 		A8F67B761C33DF3F004FB5C6 /* MuseController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B751C33DF3F004FB5C6 /* MuseController.m */; };
 		A8F67B791C33DF52004FB5C6 /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B781C33DF52004FB5C6 /* LoggingListener.m */; };
@@ -35,11 +37,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A836E4081C33FA660078A9D7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5401E0181A93DA2600FADC22 /* Pl3y.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pl3y.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5401E0311A93DA2600FADC22 /* Pl3y.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pl3y.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5401E0361A93DA2600FADC22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5401E0371A93DA2600FADC22 /* MuseStatsIosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseStatsIosTests.m; sourceTree = "<group>"; };
+		5FB618AEDDB6ED15441F8645 /* Pods-Pl3y.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pl3y.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y.release.xcconfig"; sourceTree = "<group>"; };
+		7C87B254F9BEE46D5478B958 /* Pods-Pl3y.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pl3y.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y.debug.xcconfig"; sourceTree = "<group>"; };
+		A837744D1C33F3F90069B6A6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
+		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 		A8C7991D1C317C1C00D29177 /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Muse.h; path = MuseStatsIos/Muse/Muse.h; sourceTree = "<group>"; };
 		A8C799201C317C7500D29177 /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = MuseStatsIos/Muse/libMuse.a; sourceTree = "<group>"; };
 		A8D8DBD21C33E20100B5D9D6 /* Pl3y-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Pl3y-Prefix.pch"; path = "Pl3y/Pl3y-Prefix.pch"; sourceTree = "<group>"; };
@@ -66,6 +86,7 @@
 		A8F67B8F1C33DFB3004FB5C6 /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Muse.h; sourceTree = "<group>"; };
 		A8F67B901C33E022004FB5C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Pl3y/Images/Images.xcassets; sourceTree = "<group>"; };
 		A8F67B931C33E0A3004FB5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Pl3y/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2D80E06800889378D389368 /* Pods_Pl3y.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pl3y.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94FB6EF1B03B53400B73B4B /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -75,7 +96,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94FB6F01B03B53400B73B4B /* libc++.dylib in Frameworks */,
+				A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */,
 				A8C799211C317C7500D29177 /* libMuse.a in Frameworks */,
+				698B046D36E303AA3ABFBAA4 /* Pods_Pl3y.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +120,8 @@
 				5401E01A1A93DA2600FADC22 /* Pl3y */,
 				5401E0341A93DA2600FADC22 /* MuseStatsIosTests */,
 				5401E0191A93DA2600FADC22 /* Products */,
+				6F618ED1CF3CE8DFDBDD30FC /* Pods */,
+				62262D3B44C67B939FC64CC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +170,31 @@
 				5401E0361A93DA2600FADC22 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62262D3B44C67B939FC64CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A837744D1C33F3F90069B6A6 /* Charts.framework */,
+				B2D80E06800889378D389368 /* Pods_Pl3y.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F618ED1CF3CE8DFDBDD30FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C87B254F9BEE46D5478B958 /* Pods-Pl3y.debug.xcconfig */,
+				5FB618AEDDB6ED15441F8645 /* Pods-Pl3y.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8AEE4591C33FECD00FD2B89 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PieChart;
 			sourceTree = "<group>";
 		};
 		A8C798D91C316DB700D29177 /* Externals */ = {
@@ -202,6 +252,8 @@
 				A8F67B7D1C33DF66004FB5C6 /* CustomViewController.m */,
 				A8F67B7E1C33DF66004FB5C6 /* ExperimentViewController.h */,
 				A8F67B7F1C33DF66004FB5C6 /* ExperimentViewController.m */,
+				A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */,
+				A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */,
 				A8F67B801C33DF66004FB5C6 /* InnerRootViewController.h */,
 				A8F67B811C33DF66004FB5C6 /* InnerRootViewController.m */,
 				A8F67B821C33DF66004FB5C6 /* MenuViewController.h */,
@@ -231,6 +283,7 @@
 		A8C799241C32C30A00D29177 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A8AEE4591C33FECD00FD2B89 /* PieChart */,
 				A8C799251C32C30F00D29177 /* Muse */,
 			);
 			name = Utils;
@@ -254,9 +307,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5401E03B1A93DA2600FADC22 /* Build configuration list for PBXNativeTarget "Pl3y" */;
 			buildPhases = (
+				EAAB76FEE90F197B5DB07D29 /* Check Pods Manifest.lock */,
 				5401E0141A93DA2600FADC22 /* Sources */,
 				5401E0151A93DA2600FADC22 /* Frameworks */,
 				5401E0161A93DA2600FADC22 /* Resources */,
+				1F17F4C4FB9C3BE128F55E02 /* Embed Pods Frameworks */,
+				CA62025279758031DF2198C4 /* Copy Pods Resources */,
+				A836E4081C33FA660078A9D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,7 +392,6 @@
 			files = (
 				A8F67B941C33E0A3004FB5C6 /* Main.storyboard in Resources */,
 				A8F67B911C33E022004FB5C6 /* Images.xcassets in Resources */,
-				A8F67B721C33DF34004FB5C6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,11 +404,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F17F4C4FB9C3BE128F55E02 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA62025279758031DF2198C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAAB76FEE90F197B5DB07D29 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5401E0141A93DA2600FADC22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */,
 				A8F67B731C33DF34004FB5C6 /* main.m in Sources */,
 				A8F67B8A1C33DF66004FB5C6 /* MenuViewController.m in Sources */,
 				A8F67B871C33DF66004FB5C6 /* CustomViewController.m in Sources */,
@@ -415,6 +520,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -434,6 +540,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,6 +565,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,6 +577,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -477,20 +586,25 @@
 		};
 		5401E03C1A93DA2600FADC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C87B254F9BEE46D5478B958 /* Pods-Pl3y.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Pl3y/Pl3y-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = Pl3y/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +612,10 @@
 					"$(PROJECT_DIR)/Pl3y",
 					"$(PROJECT_DIR)/Pl3y/Muse",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";
@@ -507,20 +624,25 @@
 		};
 		5401E03D1A93DA2600FADC22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB618AEDDB6ED15441F8645 /* Pods-Pl3y.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Pl3y/Pl3y-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = Pl3y/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,7 +650,10 @@
 					"$(PROJECT_DIR)/Pl3y",
 					"$(PROJECT_DIR)/Pl3y/Muse",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";

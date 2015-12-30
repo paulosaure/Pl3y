@@ -1,0 +1,11 @@
+platform :ios, '8.0'
+
+use_frameworks!
+
+target 'Pl3y' do
+  pod 'Charts', '~> 2.1'
+end
+
+target 'Pl3yTests' do
+
+end

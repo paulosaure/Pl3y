@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigTrainingViewController : UIViewController
+@interface ConfigTrainingViewController : InnerRootViewController
 
 @end

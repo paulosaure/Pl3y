@@ -10,6 +10,6 @@
 
 #define MenuViewControllerID    @"MenuViewControllerID"
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : InnerRootViewController
 
 @end

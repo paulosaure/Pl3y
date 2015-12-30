@@ -23,9 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleHorsesShoeNotification:) name:horsesShoeNotification object:nil];
     
     self.informationLabel.textColor = [UIColor blueColor];
@@ -38,14 +38,12 @@
     
     [self changeColorBackground:[UIColor brownColor]];
     
-    MuseController *muse = [[MuseController alloc] init];
-    
-    NSMutableArray *listenedObjects = [NSMutableArray array];
-    [listenedObjects addObject:@(IXNMuseDataPacketTypeConcentration)];
-    [listenedObjects addObject:@(IXNMuseDataPacketTypeHorseshoe)];
-    muse.listenedObjects = listenedObjects;
-    [muse resumeInstance];
-
+    // Init listener
+    NSArray *listenedObjects = @[ @(IXNMuseDataPacketTypeConcentration),
+                                  @(IXNMuseDataPacketTypeHorseshoe),
+                                  @(IXNMuseDataPacketTypeMellow)
+                                  ];
+    [InnerRootViewController initMuseWithListener:listenedObjects];
 }
 
 - (void)changeColorBackground:(UIColor *)color
