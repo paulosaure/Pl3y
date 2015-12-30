@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "73FD0E1492933E7CE80170FCB4A364A94D9C499C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "73FD0E1492933E7CE80170FCB4A364A94D9C499C" : 0,
+    "71B8D181B20ECC82292907534E9E113D268711CD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "994CD19E-0A73-4C95-9D55-27E30B480170",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "73FD0E1492933E7CE80170FCB4A364A94D9C499C" : "MuseStatslos\/",
+    "71B8D181B20ECC82292907534E9E113D268711CD" : "libmuse"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MuseStatsIos",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "examples\/MuseStatsIos\/MuseStatsIos.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:interaxon\/libmuse",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71B8D181B20ECC82292907534E9E113D268711CD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/paulosaure\/MuseStatslos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73FD0E1492933E7CE80170FCB4A364A94D9C499C"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+//
+//  Muse_Prefix.pch
+//  MuseStatsIos
+//
+//  Created by Paul Lavoine on 29/12/2015.
+//  Copyright © 2015 InteraXon. All rights reserved.
+//
+
+#ifndef Muse_Prefix_pch
+#define Muse_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import "InnerRootViewController.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Muse_Prefix_pch */
