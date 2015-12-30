@@ -20,10 +20,6 @@
 
 // Outlets
 @property (nonatomic, strong) IBOutlet PieChartView *chartView;
-@property (nonatomic, strong) IBOutlet UISlider *sliderX;
-@property (nonatomic, strong) IBOutlet UISlider *sliderY;
-@property (nonatomic, strong) IBOutlet UITextField *sliderTextX;
-@property (nonatomic, strong) IBOutlet UITextField *sliderTextY;
 
 // Data
 @property (nonatomic, strong) NSMutableArray *valueListenedObjects;
@@ -91,9 +87,7 @@
     l.yEntrySpace = 0.0;
     l.yOffset = 0.0;
     
-    _sliderX.value = 3.0;
-    _sliderY.value = 100.0;
-    [self setDataCount:[self.valueListenedObjects count] range:1];
+    [self setDataCount:[self.valueListenedObjects count]];
     
     [_chartView animateWithXAxisDuration:1.4 yAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
 }
@@ -126,12 +120,11 @@
             break;
     }
     
-    [self setDataCount:[self.valueListenedObjects count] range:1];
+    [self setDataCount:[self.valueListenedObjects count]];
 }
 
-- (void)setDataCount:(NSInteger)count range:(double)range
+- (void)setDataCount:(NSInteger)count
 {
-    double mult = range;
     
     NSMutableArray *yVals1 = [[NSMutableArray alloc] init];
     
@@ -146,14 +139,14 @@
     
     for (int i = 0; i < count; i++)
     {
-        [xVals addObject:self.valueListenedObjects[i % [self.valueListenedObjects count]]];
+        NSString *legendString = [self stringDataWithPacketType:i];
+        [xVals addObject:legendString];
     }
     
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithYVals:yVals1 label:@"Election Results"];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithYVals:yVals1 label:@"Legend"];
     dataSet.sliceSpace = 2.0;
     
     // add a lot of colors
-    
     NSMutableArray *colors = [[NSMutableArray alloc] init];
     [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
     [colors addObjectsFromArray:ChartColorTemplates.joyful];
@@ -180,94 +173,6 @@
     [_chartView highlightValues:nil];
 }
 
-- (void)optionTapped:(NSString *)key
-{
-    if ([key isEqualToString:@"toggleValues"])
-    {
-        for (ChartDataSet *set in _chartView.data.dataSets)
-        {
-            set.drawValuesEnabled = !set.isDrawValuesEnabled;
-        }
-        
-        [_chartView setNeedsDisplay];
-    }
-    
-    if ([key isEqualToString:@"toggleXValues"])
-    {
-        _chartView.drawSliceTextEnabled = !_chartView.isDrawSliceTextEnabled;
-        
-        [_chartView setNeedsDisplay];
-    }
-    
-    if ([key isEqualToString:@"togglePercent"])
-    {
-        _chartView.usePercentValuesEnabled = !_chartView.isUsePercentValuesEnabled;
-        
-        [_chartView setNeedsDisplay];
-    }
-    
-    if ([key isEqualToString:@"toggleHole"])
-    {
-        _chartView.drawHoleEnabled = !_chartView.isDrawHoleEnabled;
-        
-        [_chartView setNeedsDisplay];
-    }
-    
-    if ([key isEqualToString:@"drawCenter"])
-    {
-        _chartView.drawCenterTextEnabled = !_chartView.isDrawCenterTextEnabled;
-        
-        [_chartView setNeedsDisplay];
-    }
-    
-    if ([key isEqualToString:@"animateX"])
-    {
-        [_chartView animateWithXAxisDuration:1.4];
-    }
-    
-    if ([key isEqualToString:@"animateY"])
-    {
-        [_chartView animateWithYAxisDuration:1.4];
-    }
-    
-    if ([key isEqualToString:@"animateXY"])
-    {
-        [_chartView animateWithXAxisDuration:1.4 yAxisDuration:1.4];
-    }
-    
-    if ([key isEqualToString:@"spin"])
-    {
-        [_chartView spinWithDuration:2.0 fromAngle:_chartView.rotationAngle toAngle:_chartView.rotationAngle + 360.f];
-    }
-    
-    if ([key isEqualToString:@"saveToGallery"])
-    {
-        [_chartView saveToCameraRoll];
-    }
-}
-
-#pragma mark - Actions
-
-- (IBAction)slidersValueChanged:(id)sender
-{
-    _sliderTextX.text = [@((int)_sliderX.value + 1) stringValue];
-    _sliderTextY.text = [@((int)_sliderY.value) stringValue];
-    
-    [self setDataCount:(_sliderX.value + 1) range:_sliderY.value];
-}
-
-#pragma mark - ChartViewDelegate
-
-- (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry dataSetIndex:(NSInteger)dataSetIndex highlight:(ChartHighlight * __nonnull)highlight
-{
-    NSLog(@"chartValueSelected");
-}
-
-- (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView
-{
-    NSLog(@"chartValueNothingSelected");
-}
-
 #pragma mark - Utils
 
 - (CGFloat)averagePacketValue:(NSArray *)values
@@ -286,6 +191,34 @@
     }
     
     return (sumValideValue/cptValideValue);
+}
+
+- (NSString *)stringDataWithPacketType:(NSInteger)packet
+{
+    NSString *packetType = @"";
+    
+    switch (packet) {
+        case 0:
+            packetType = @"Alpha";
+            break;
+        case 1:
+            packetType = @"Beta";
+            break;
+        case 2:
+            packetType = @"Delta";
+            break;
+        case 3:
+            packetType = @"Theta";
+            break;
+        case 4:
+            packetType = @"Gamma";
+            break;
+        default:
+            packetType = @"Type problem";
+            break;
+    }
+    
+    return packetType;
 }
 
 @end
