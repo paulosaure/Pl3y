@@ -16,7 +16,7 @@
 + (instancetype)sharedInstance;
 - (void)resumeInstance;
 - (void)reconnectToMuse;
-- (void)registerDataListener;
+- (void)registerDataListeners;
 
 @property (strong, nonatomic) id<IXNMuse> muse;
 @property (strong, nonatomic) NSArray *listenedObjects;
