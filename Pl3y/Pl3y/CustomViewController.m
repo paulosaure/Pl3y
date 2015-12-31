@@ -43,6 +43,7 @@
                                   @(IXNMuseDataPacketTypeHorseshoe),
                                   @(IXNMuseDataPacketTypeMellow)
                                   ];
+    
     [RootViewController initMuseWithListener:listenedObjects];
 }
 

@@ -51,8 +51,10 @@
 
 + (void)initMuseWithListener:(NSArray *)listeners
 {
-    MuseController *muse = [[MuseController alloc] init];
+    MuseController *muse = [MuseController sharedInstance];
+    [muse.muse unregisterAllListeners];
     muse.listenedObjects = listeners;
+    [[MuseController sharedInstance] registerDataListeners];
     [muse resumeInstance];
 }
 

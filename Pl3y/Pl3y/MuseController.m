@@ -122,6 +122,12 @@
     [self.musePickerTimer invalidate];
     self.musePickerTimer = nil;
     
+    [self registerDataListeners];
+}
+
+- (void)registerDataListeners
+{
+    // Register Data Listener
     for (NSNumber *type in self.listenedObjects)
     {
         [self.muse registerDataListener:self.loggingListener
