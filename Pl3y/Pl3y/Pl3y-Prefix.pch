@@ -10,7 +10,7 @@
 #define Muse_Prefix_pch
 
 #import <Foundation/Foundation.h>
-#import "InnerRootViewController.h"
+#import "RootViewController.h"
 
 
 #define batteryNotification         @"batteryNotification"

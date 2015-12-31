@@ -13,6 +13,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PieChartViewController : InnerRootViewController
+@interface PieChartViewController : RootViewController
 
 @end

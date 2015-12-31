@@ -38,54 +38,50 @@
                                   @(IXNMuseDataPacketTypeGammaRelative),
                                   @(IXNMuseDataPacketTypeThetaRelative)
                                   ];
-    [InnerRootViewController initMuseWithListener:listenedObjects];
+    [RootViewController initMuseWithListener:listenedObjects];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataNotification:) name:dataNotification object:nil];
     
     self.valueListenedObjects = [NSMutableArray array];
     
-    self.title = @"Pie Bar Chart";
+    self.title = @"Pl3y Chart";
     
-    _chartView.delegate = self;
+    self.chartView.delegate = self;
     
-    _chartView.usePercentValuesEnabled = YES;
-    _chartView.holeTransparent = YES;
-    _chartView.holeRadiusPercent = 0.58;
-    _chartView.transparentCircleRadiusPercent = 0.61;
-    _chartView.descriptionText = @"";
-    [_chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
+    self.chartView.usePercentValuesEnabled = YES;
+    self.chartView.holeTransparent = YES;
+    self.chartView.holeRadiusPercent = 0.58;
+    self.chartView.transparentCircleRadiusPercent = 0.61;
+    self.chartView.descriptionText = @"";
+    [self.chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
     
-    _chartView.drawCenterTextEnabled = YES;
+    self.chartView.drawCenterTextEnabled = YES;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"iOS Charts\nby Daniel Cohen Gindi"];
+    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Pl3y Chart"];
     [centerText setAttributes:@{
                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:12.f],
-                                NSParagraphStyleAttributeName: paragraphStyle
-                                } range:NSMakeRange(0, centerText.length)];
-    [centerText addAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:10.f],
+                                NSParagraphStyleAttributeName: paragraphStyle,
                                 NSForegroundColorAttributeName: UIColor.grayColor
-                                } range:NSMakeRange(10, centerText.length - 10)];
-    [centerText addAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-LightItalic" size:10.f],
-                                NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]
-                                } range:NSMakeRange(centerText.length - 19, 19)];
-    _chartView.centerAttributedText = centerText;
+                                } range:NSMakeRange(0, centerText.length)];
+
+    self.chartView.centerAttributedText = centerText;
     
-    _chartView.drawHoleEnabled = YES;
-    _chartView.rotationAngle = 0.0;
-    _chartView.rotationEnabled = YES;
-    _chartView.highlightPerTapEnabled = YES;
+    self.chartView.drawHoleEnabled = YES;
+    self.chartView.rotationAngle = 0.0;
+    self.chartView.rotationEnabled = YES;
+    self.chartView.highlightPerTapEnabled = YES;
     
-    ChartLegend *l = _chartView.legend;
+    ChartLegend *l = self.chartView.legend;
     l.position = ChartLegendPositionRightOfChart;
-    l.xEntrySpace = 7.0;
+    l.xEntrySpace = 10007.0;
     l.yEntrySpace = 0.0;
-    l.yOffset = 0.0;
+    
+    // Warning : Allows to hide legend
+    l.yOffset = 100000.0;
     
     [self setDataCount:[self.valueListenedObjects count]];
     
@@ -143,7 +139,7 @@
         [xVals addObject:legendString];
     }
     
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithYVals:yVals1 label:@"Legend"];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithYVals:yVals1 label:@""];
     dataSet.sliceSpace = 2.0;
     
     // add a lot of colors

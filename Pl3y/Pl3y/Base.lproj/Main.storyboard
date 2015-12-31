@@ -13,13 +13,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="HDq-79-d3G" kind="relationship" relationship="rootViewController" id="vvv-PX-oJH"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H64-BS-WvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="-51"/>
+            <point key="canvasLocation" x="-338" y="-169"/>
         </scene>
         <!--Config Training View Controller-->
         <scene sceneID="w3H-6B-pTj">

@@ -7,7 +7,7 @@
 
 #define CustomViewControllerID @"CustomViewControllerID"
 
-@interface CustomViewController : InnerRootViewController
+@interface CustomViewController : RootViewController
 
 - (void)changeColorBackground:(UIColor *)color;
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="backButton" destination="oDt-a4-dTO" id="NuV-Ba-JtM"/>
+                <outlet property="sensorView" destination="erj-2I-8te" id="jOZ-Jn-GQH"/>
+                <outlet property="supportView" destination="odp-a6-hrC" id="xoj-8V-leh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gfO-im-rWl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odp-a6-hrC" userLabel="SupportView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erj-2I-8te">
+                    <rect key="frame" x="0.0" y="169" width="600" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="YJT-Re-vLa"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-a4-dTO">
+                    <rect key="frame" x="50" y="50" width="34" height="30"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="tRQ-zV-wl2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="erj-2I-8te" secondAttribute="trailing" id="Iar-tW-ZlL"/>
+                <constraint firstItem="erj-2I-8te" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="169" id="PU6-hN-p8z"/>
+                <constraint firstAttribute="trailing" secondItem="odp-a6-hrC" secondAttribute="trailing" id="V1p-xh-ass"/>
+                <constraint firstAttribute="bottom" secondItem="odp-a6-hrC" secondAttribute="bottom" id="WuL-ib-V3h"/>
+                <constraint firstItem="erj-2I-8te" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dcb-41-xwY"/>
+                <constraint firstItem="odp-a6-hrC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f1G-wj-yMy"/>
+                <constraint firstItem="odp-a6-hrC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uHJ-CM-5Ak"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

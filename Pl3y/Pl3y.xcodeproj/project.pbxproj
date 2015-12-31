@@ -11,6 +11,9 @@
 		698B046D36E303AA3ABFBAA4 /* Pods_Pl3y.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D80E06800889378D389368 /* Pods_Pl3y.framework */; };
 		A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A837744D1C33F3F90069B6A6 /* Charts.framework */; };
 		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
+		A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE4731C343AA900FD2B89 /* RootViewController.m */; };
+		A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AEE4891C3566B700FD2B89 /* RootViewController.xib */; };
+		A8AEE48D1C35681C00FD2B89 /* RootAwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE48C1C35681C00FD2B89 /* RootAwareViewController.m */; };
 		A8C799211C317C7500D29177 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C799201C317C7500D29177 /* libMuse.a */; };
 		A8F67B731C33DF34004FB5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B701C33DF34004FB5C6 /* main.m */; };
 		A8F67B761C33DF3F004FB5C6 /* MuseController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B751C33DF3F004FB5C6 /* MuseController.m */; };
@@ -18,7 +21,6 @@
 		A8F67B861C33DF66004FB5C6 /* ConfigTrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B7B1C33DF66004FB5C6 /* ConfigTrainingViewController.m */; };
 		A8F67B871C33DF66004FB5C6 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B7D1C33DF66004FB5C6 /* CustomViewController.m */; };
 		A8F67B881C33DF66004FB5C6 /* ExperimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B7F1C33DF66004FB5C6 /* ExperimentViewController.m */; };
-		A8F67B891C33DF66004FB5C6 /* InnerRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B811C33DF66004FB5C6 /* InnerRootViewController.m */; };
 		A8F67B8A1C33DF66004FB5C6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B831C33DF66004FB5C6 /* MenuViewController.m */; };
 		A8F67B8B1C33DF66004FB5C6 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B851C33DF66004FB5C6 /* MusicViewController.m */; };
 		A8F67B8E1C33DF9D004FB5C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B8D1C33DF9D004FB5C6 /* AppDelegate.m */; };
@@ -60,6 +62,11 @@
 		A837744D1C33F3F90069B6A6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
 		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
 		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
+		A8AEE4721C343AA900FD2B89 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A8AEE4731C343AA900FD2B89 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A8AEE4891C3566B700FD2B89 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		A8AEE48B1C35681C00FD2B89 /* RootAwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootAwareViewController.h; sourceTree = "<group>"; };
+		A8AEE48C1C35681C00FD2B89 /* RootAwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootAwareViewController.m; sourceTree = "<group>"; };
 		A8C7991D1C317C1C00D29177 /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Muse.h; path = MuseStatsIos/Muse/Muse.h; sourceTree = "<group>"; };
 		A8C799201C317C7500D29177 /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = MuseStatsIos/Muse/libMuse.a; sourceTree = "<group>"; };
 		A8D8DBD21C33E20100B5D9D6 /* Pl3y-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Pl3y-Prefix.pch"; path = "Pl3y/Pl3y-Prefix.pch"; sourceTree = "<group>"; };
@@ -75,8 +82,6 @@
 		A8F67B7D1C33DF66004FB5C6 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		A8F67B7E1C33DF66004FB5C6 /* ExperimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperimentViewController.h; sourceTree = "<group>"; };
 		A8F67B7F1C33DF66004FB5C6 /* ExperimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperimentViewController.m; sourceTree = "<group>"; };
-		A8F67B801C33DF66004FB5C6 /* InnerRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerRootViewController.h; sourceTree = "<group>"; };
-		A8F67B811C33DF66004FB5C6 /* InnerRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnerRootViewController.m; sourceTree = "<group>"; };
 		A8F67B821C33DF66004FB5C6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		A8F67B831C33DF66004FB5C6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A8F67B841C33DF66004FB5C6 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
@@ -197,6 +202,15 @@
 			name = PieChart;
 			sourceTree = "<group>";
 		};
+		A8AEE48E1C356E0000FD2B89 /* RootAware */ = {
+			isa = PBXGroup;
+			children = (
+				A8AEE48B1C35681C00FD2B89 /* RootAwareViewController.h */,
+				A8AEE48C1C35681C00FD2B89 /* RootAwareViewController.m */,
+			);
+			name = RootAware;
+			sourceTree = "<group>";
+		};
 		A8C798D91C316DB700D29177 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,10 +266,11 @@
 				A8F67B7D1C33DF66004FB5C6 /* CustomViewController.m */,
 				A8F67B7E1C33DF66004FB5C6 /* ExperimentViewController.h */,
 				A8F67B7F1C33DF66004FB5C6 /* ExperimentViewController.m */,
+				A8AEE4721C343AA900FD2B89 /* RootViewController.h */,
+				A8AEE4731C343AA900FD2B89 /* RootViewController.m */,
+				A8AEE4891C3566B700FD2B89 /* RootViewController.xib */,
 				A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */,
 				A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */,
-				A8F67B801C33DF66004FB5C6 /* InnerRootViewController.h */,
-				A8F67B811C33DF66004FB5C6 /* InnerRootViewController.m */,
 				A8F67B821C33DF66004FB5C6 /* MenuViewController.h */,
 				A8F67B831C33DF66004FB5C6 /* MenuViewController.m */,
 				A8F67B841C33DF66004FB5C6 /* MusicViewController.h */,
@@ -283,8 +298,9 @@
 		A8C799241C32C30A00D29177 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A8AEE4591C33FECD00FD2B89 /* PieChart */,
 				A8C799251C32C30F00D29177 /* Muse */,
+				A8AEE4591C33FECD00FD2B89 /* PieChart */,
+				A8AEE48E1C356E0000FD2B89 /* RootAware */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -392,6 +408,7 @@
 			files = (
 				A8F67B941C33E0A3004FB5C6 /* Main.storyboard in Resources */,
 				A8F67B911C33E022004FB5C6 /* Images.xcassets in Resources */,
+				A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,9 +478,10 @@
 				A8F67B731C33DF34004FB5C6 /* main.m in Sources */,
 				A8F67B8A1C33DF66004FB5C6 /* MenuViewController.m in Sources */,
 				A8F67B871C33DF66004FB5C6 /* CustomViewController.m in Sources */,
+				A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */,
 				A8F67B761C33DF3F004FB5C6 /* MuseController.m in Sources */,
 				A8F67B8E1C33DF9D004FB5C6 /* AppDelegate.m in Sources */,
-				A8F67B891C33DF66004FB5C6 /* InnerRootViewController.m in Sources */,
+				A8AEE48D1C35681C00FD2B89 /* RootAwareViewController.m in Sources */,
 				A8F67B861C33DF66004FB5C6 /* ConfigTrainingViewController.m in Sources */,
 				A8F67B8B1C33DF66004FB5C6 /* MusicViewController.m in Sources */,
 				A8F67B791C33DF52004FB5C6 /* LoggingListener.m in Sources */,

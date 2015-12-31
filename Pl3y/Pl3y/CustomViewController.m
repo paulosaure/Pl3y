@@ -43,7 +43,7 @@
                                   @(IXNMuseDataPacketTypeHorseshoe),
                                   @(IXNMuseDataPacketTypeMellow)
                                   ];
-    [InnerRootViewController initMuseWithListener:listenedObjects];
+    [RootViewController initMuseWithListener:listenedObjects];
 }
 
 - (void)changeColorBackground:(UIColor *)color

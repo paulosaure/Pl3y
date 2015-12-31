@@ -13,7 +13,7 @@
 
 @interface MuseController : NSObject
 
-//+ (instancetype)sharedInstance;
++ (instancetype)sharedInstance;
 - (void)resumeInstance;
 - (void)reconnectToMuse;
 

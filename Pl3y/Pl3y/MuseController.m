@@ -21,16 +21,16 @@
 @implementation MuseController
 
 #pragma mark - Shared instance
-//+ (instancetype)sharedInstance
-//{
-//    static MuseController *sharedInstance;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        sharedInstance = [[MuseController alloc] init];
-//    });
-//    
-//    return sharedInstance;
-//}
++ (instancetype)sharedInstance
+{
+    static MuseController *sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[MuseController alloc] init];
+    });
+    
+    return sharedInstance;
+}
 
 
 - (id)init
