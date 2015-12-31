@@ -54,7 +54,7 @@
     MuseController *muse = [MuseController sharedInstance];
     [muse.muse unregisterAllListeners];
     muse.listenedObjects = listeners;
-    [[MuseController sharedInstance] registerDataListeners];
+    [[MuseController sharedInstance] registerDataListener];
     [muse resumeInstance];
 }
 
