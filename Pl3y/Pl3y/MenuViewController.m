@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "ConfigTrainingViewController.h"
 
 @interface MenuViewController ()
 
@@ -19,7 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 @end

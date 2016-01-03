@@ -4,7 +4,7 @@
 //
 
 #import "LoggingListener.h"
-#import "CustomViewController.h"
+
 #import "MuseController.h"
 
 @interface LoggingListener () {

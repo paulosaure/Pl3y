@@ -3,10 +3,10 @@
 //  MuseStatsIos
 //
 
-#import "CustomViewController.h"
+#import "TrainingViewController.h"
 #import "MuseController.h"
 
-@interface CustomViewController ()
+@interface TrainingViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *mellowLabel;
 
@@ -15,10 +15,27 @@
 @property (weak, nonatomic) IBOutlet UILabel *thirdSensor;
 @property (weak, nonatomic) IBOutlet UILabel *fourthSensor;
 
+// Data
+@property (nonatomic, strong) NSArray *selectedStates;
+
 @end
 
-@implementation CustomViewController
+@implementation TrainingViewController
 
+
+#pragma mark - Initializer
+
+- (instancetype)initWithStates:(NSArray *)states
+{
+    if (self = [super init])
+    {
+        _selectedStates = states;
+    }
+    
+    return self;
+}
+
+#pragma mark - View life cycle
 
 - (void)viewDidLoad
 {
@@ -35,12 +52,7 @@
     [self changeColorBackground:[UIColor brownColor]];
     
     // Init listener
-    NSArray *listenedObjects = @[ @(IXNMuseDataPacketTypeConcentration),
-                                  @(IXNMuseDataPacketTypeHorseshoe),
-                                  @(IXNMuseDataPacketTypeMellow)
-                                  ];
-    
-    [RootViewController setMuseWithListener:listenedObjects];
+    [RootViewController setMuseWithListener:self.selectedStates];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];

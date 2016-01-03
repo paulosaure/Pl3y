@@ -5,10 +5,11 @@
 
 #import <UIKit/UIKit.h>
 
-#define CustomViewControllerID @"CustomViewControllerID"
+#define TrainingViewControllerID @"TrainingViewControllerID"
 
-@interface CustomViewController : RootViewController
+@interface TrainingViewController : RootAwareViewController
 
+- (instancetype)initWithStates:(NSArray *)states;
 - (void)changeColorBackground:(UIColor *)color;
 
 // Outputs

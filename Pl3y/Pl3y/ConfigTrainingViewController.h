@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigTrainingViewController : RootViewController
+#define ConfigTrainingViewControllerID @"ConfigTrainingViewControllerID"
+
+@interface ConfigTrainingViewController : RootAwareViewController
 
 @end

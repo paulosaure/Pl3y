@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RootAwareViewController.h"
 
 #define MenuViewControllerID    @"MenuViewControllerID"
 

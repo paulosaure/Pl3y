@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MusicViewController : RootViewController
+@interface MusicViewController : RootAwareViewController
 
 @end
