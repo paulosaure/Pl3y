@@ -5,17 +5,14 @@
 
 #import "TrainingViewController.h"
 #import "MuseController.h"
+#import "StateTrainingView.h"
 
 @interface TrainingViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *mellowLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *firstSensor;
-@property (weak, nonatomic) IBOutlet UILabel *secondSensor;
-@property (weak, nonatomic) IBOutlet UILabel *thirdSensor;
-@property (weak, nonatomic) IBOutlet UILabel *fourthSensor;
+// Outlets
 
 // Data
+@property (nonatomic, strong) NSMutableDictionary *states;
 @property (nonatomic, strong) NSArray *selectedStates;
 
 @end
@@ -41,22 +38,51 @@
 {
     [super viewDidLoad];
     
-    self.informationLabel.textColor = [UIColor blueColor];
-    self.mellowLabel.textColor = [UIColor blueColor];
-    self.firstSensor.textColor = [UIColor blueColor];
-    self.secondSensor.textColor = [UIColor blueColor];
-    self.thirdSensor.textColor = [UIColor blueColor];
-    self.fourthSensor.textColor = [UIColor blueColor];
-    self.informationLabel.text = @"Waiting ...";
-    
     [self changeColorBackground:[UIColor brownColor]];
+    
+    [self configureStatesView];
     
     // Init listener
     [RootViewController setMuseWithListener:self.selectedStates];
     
+    // Notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleHorsesShoeNotification:) name:horsesShoeNotification object:nil];
+}
+
+- (void)configureStatesView
+{
+    UIView *previousView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    NSInteger numberOfStateView = [self.selectedStates count];
+    for (NSNumber *state in self.selectedStates)
+    {
+        CGFloat height = CGRectGetHeight(self.view.frame)/numberOfStateView;
+        StateTrainingView *stateView = [[StateTrainingView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(previousView.frame), CGRectGetWidth(self.view.frame), height)];
+        
+        switch ([state integerValue]) {
+            case IXNMuseDataPacketTypeConcentration:
+            {
+                stateView.title = ConcentrationStateViewLabel;
+                stateView.backgroundColor = [UIColor redColor];
+                [self.states setObject:stateView forKey:@(IXNMuseDataPacketTypeConcentration)];
+                break;
+            }
+            case IXNMuseDataPacketTypeMellow:
+            {
+                stateView.title = MellowStateViewLabel;
+                stateView.backgroundColor = [UIColor blueColor];
+                [self.states setObject:stateView forKey:@(IXNMuseDataPacketTypeMellow)];
+                break;
+            }
+            default:
+                NSLog(@"Problem : Not a mellow or concentration view");
+                break;
+        }
+        
+        [stateView stateLabelTitle:0.f];
+        [self.view addSubview:stateView];
+        previousView = stateView;
+    }
 }
 
 - (void)changeColorBackground:(UIColor *)color
@@ -64,39 +90,31 @@
     self.view.backgroundColor = color;
 }
 
-- (void)handleHorsesShoeNotification:(NSNotification*)note
-{
-    NSArray *packet = note.object;
-    self.firstSensor.text = [NSString stringWithFormat:@"%.f  - ",[[packet objectAtIndex:0] floatValue]];
-    self.secondSensor.text = [NSString stringWithFormat:@"%.f  - ",[[packet objectAtIndex:1] floatValue]];
-    self.thirdSensor.text = [NSString stringWithFormat:@"%.f  - ",[[packet objectAtIndex:2] floatValue]];
-    self.fourthSensor.text = [NSString stringWithFormat:@"%.f",[[packet objectAtIndex:3] floatValue]];
-}
-
 - (void)handleMellowNotification:(NSNotification*)note
 {
-    NSArray *packet = note.object;
-    NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
-    CGFloat floatValue = [value floatValue];
+    StateTrainingView *mellowView = [self.states objectForKey:@(IXNMuseDataPacketTypeMellow)];
+    [mellowView stateLabelTitle:[self valueWithNotification:note]];
     
-    
-    self.mellowLabel.text = [NSString stringWithFormat:@"Mellow : %f", floatValue];
-    
-    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
-    [self changeColorBackground:color];
+    //    self.mellowLabel.text = [NSString stringWithFormat:@"Mellow : %f", floatValue];
+    //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
+    //    [self changeColorBackground:color];
 }
 
 - (void)handleConcentrationNotification:(NSNotification*)note
 {
-    NSArray *packet = note.object;
-    NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
-    CGFloat floatValue = [value floatValue];
+    StateTrainingView *concentrationView = [self.states objectForKey:@(IXNMuseDataPacketTypeConcentration)];
+    [concentrationView stateLabelTitle:[self valueWithNotification:note]];
     
-    
-    self.informationLabel.text = [NSString stringWithFormat:@"Conc : %f", floatValue];
-    
+    //    self.informationLabel.text = [NSString stringWithFormat:@"Conc : %f", floatValue];
     //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
     //    [self changeColorBackground:color];
+}
+
+- (CGFloat)valueWithNotification:(NSNotification *)notification
+{
+    NSArray *packet = notification.object;
+    NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
+    return [value floatValue];
 }
 
 @end

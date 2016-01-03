@@ -12,8 +12,5 @@
 - (instancetype)initWithStates:(NSArray *)states;
 - (void)changeColorBackground:(UIColor *)color;
 
-// Outputs
-@property (weak, nonatomic) IBOutlet UILabel *informationLabel;
-
 @end
 

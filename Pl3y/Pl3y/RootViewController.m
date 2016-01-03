@@ -103,6 +103,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveHorsesShoesNotification:) name:horsesShoeNotification object:nil];
 }
 
+- (void)configureBatteryView
+{
+    BatteryViewController *battery = [[BatteryViewController alloc] init];
+    battery.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.batteryView.frame), CGRectGetHeight(self.batteryView.frame));
+    [self.batteryView addSubview:battery.view];
+}
+
 #pragma mark - Notification
 
 - (void)receiveHorsesShoesNotification:(NSNotification *)notification
@@ -186,13 +193,6 @@
             return [UIColor redColor];
             break;
     }
-}
-
-- (void)configureBatteryView
-{
-    BatteryViewController *battery = [[BatteryViewController alloc] init];
-    battery.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.batteryView.frame), CGRectGetHeight(self.batteryView.frame));
-    [self.batteryView addSubview:battery.view];
 }
 
 @end

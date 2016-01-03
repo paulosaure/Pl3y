@@ -12,6 +12,8 @@
 		A811EDD91C38823000D3D848 /* BatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A811EDD71C38823000D3D848 /* BatteryViewController.m */; };
 		A811EDDA1C38823000D3D848 /* BatteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A811EDD81C38823000D3D848 /* BatteryViewController.xib */; };
 		A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A837744D1C33F3F90069B6A6 /* Charts.framework */; };
+		A85945CD1C38B8AC00555CB8 /* StateTrainingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85945CC1C38B8AC00555CB8 /* StateTrainingView.xib */; };
+		A85945D01C38B8C000555CB8 /* StateTrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85945CF1C38B8C000555CB8 /* StateTrainingView.m */; };
 		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
 		A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE4731C343AA900FD2B89 /* RootViewController.m */; };
 		A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AEE4891C3566B700FD2B89 /* RootViewController.xib */; };
@@ -64,6 +66,9 @@
 		A811EDD71C38823000D3D848 /* BatteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryViewController.m; sourceTree = "<group>"; };
 		A811EDD81C38823000D3D848 /* BatteryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryViewController.xib; sourceTree = "<group>"; };
 		A837744D1C33F3F90069B6A6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		A85945CC1C38B8AC00555CB8 /* StateTrainingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateTrainingView.xib; sourceTree = "<group>"; };
+		A85945CE1C38B8C000555CB8 /* StateTrainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateTrainingView.h; sourceTree = "<group>"; };
+		A85945CF1C38B8C000555CB8 /* StateTrainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateTrainingView.m; sourceTree = "<group>"; };
 		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
 		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 		A8AEE4721C343AA900FD2B89 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -207,6 +212,16 @@
 			name = BatteryIcone;
 			sourceTree = "<group>";
 		};
+		A85945C91C38B5DF00555CB8 /* StateTrainingView */ = {
+			isa = PBXGroup;
+			children = (
+				A85945CE1C38B8C000555CB8 /* StateTrainingView.h */,
+				A85945CF1C38B8C000555CB8 /* StateTrainingView.m */,
+				A85945CC1C38B8AC00555CB8 /* StateTrainingView.xib */,
+			);
+			name = StateTrainingView;
+			sourceTree = "<group>";
+		};
 		A8AEE48E1C356E0000FD2B89 /* RootAware */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +319,7 @@
 				A811EDD31C38806F00D3D848 /* BatteryIcone */,
 				A8C799251C32C30F00D29177 /* Muse */,
 				A8AEE48E1C356E0000FD2B89 /* RootAware */,
+				A85945C91C38B5DF00555CB8 /* StateTrainingView */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -413,6 +429,7 @@
 				A8F67B911C33E022004FB5C6 /* Images.xcassets in Resources */,
 				A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */,
 				A811EDDA1C38823000D3D848 /* BatteryViewController.xib in Resources */,
+				A85945CD1C38B8AC00555CB8 /* StateTrainingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +505,7 @@
 				A8F67B8E1C33DF9D004FB5C6 /* AppDelegate.m in Sources */,
 				A8AEE48D1C35681C00FD2B89 /* RootAwareViewController.m in Sources */,
 				A8F67B861C33DF66004FB5C6 /* ConfigTrainingViewController.m in Sources */,
+				A85945D01C38B8C000555CB8 /* StateTrainingView.m in Sources */,
 				A8F67B8B1C33DF66004FB5C6 /* MusicViewController.m in Sources */,
 				A8F67B791C33DF52004FB5C6 /* LoggingListener.m in Sources */,
 			);
