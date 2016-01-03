@@ -38,7 +38,7 @@
                                   @(IXNMuseDataPacketTypeGammaRelative),
                                   @(IXNMuseDataPacketTypeThetaRelative)
                                   ];
-    [RootViewController initMuseWithListener:listenedObjects];
+    [RootViewController setMuseWithListener:listenedObjects];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataNotification:) name:dataNotification object:nil];
     

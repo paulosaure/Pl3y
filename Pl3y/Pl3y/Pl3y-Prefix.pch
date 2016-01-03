@@ -24,5 +24,6 @@
 #define thetaNotification           @"thetaNotification"
 #define deltaNotification           @"deltaNotification"
 #define dataNotification            @"dataNotification"
+#define connectionNotification      @"connectionNotification"
 
 #endif /* Muse_Prefix_pch */

@@ -11,6 +11,6 @@
 @interface RootViewController : UIViewController
 
 - (instancetype)initRootViewController;
-+ (void)initMuseWithListener:(NSArray *)listeners;
++ (void)setMuseWithListener:(NSArray *)listeners;
 
 @end

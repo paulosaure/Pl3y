@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5401E0381A93DA2600FADC22 /* MuseStatsIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401E0371A93DA2600FADC22 /* MuseStatsIosTests.m */; };
 		698B046D36E303AA3ABFBAA4 /* Pods_Pl3y.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D80E06800889378D389368 /* Pods_Pl3y.framework */; };
+		A811EDD91C38823000D3D848 /* BatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A811EDD71C38823000D3D848 /* BatteryViewController.m */; };
+		A811EDDA1C38823000D3D848 /* BatteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A811EDD81C38823000D3D848 /* BatteryViewController.xib */; };
 		A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A837744D1C33F3F90069B6A6 /* Charts.framework */; };
 		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
 		A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE4731C343AA900FD2B89 /* RootViewController.m */; };
@@ -59,6 +61,9 @@
 		5401E0371A93DA2600FADC22 /* MuseStatsIosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseStatsIosTests.m; sourceTree = "<group>"; };
 		5FB618AEDDB6ED15441F8645 /* Pods-Pl3y.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pl3y.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y.release.xcconfig"; sourceTree = "<group>"; };
 		7C87B254F9BEE46D5478B958 /* Pods-Pl3y.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pl3y.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pl3y/Pods-Pl3y.debug.xcconfig"; sourceTree = "<group>"; };
+		A811EDD61C38823000D3D848 /* BatteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryViewController.h; sourceTree = "<group>"; };
+		A811EDD71C38823000D3D848 /* BatteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryViewController.m; sourceTree = "<group>"; };
+		A811EDD81C38823000D3D848 /* BatteryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryViewController.xib; sourceTree = "<group>"; };
 		A837744D1C33F3F90069B6A6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
 		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
 		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
@@ -195,11 +200,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A8AEE4591C33FECD00FD2B89 /* PieChart */ = {
+		A811EDD31C38806F00D3D848 /* BatteryIcone */ = {
 			isa = PBXGroup;
 			children = (
+				A811EDD61C38823000D3D848 /* BatteryViewController.h */,
+				A811EDD71C38823000D3D848 /* BatteryViewController.m */,
+				A811EDD81C38823000D3D848 /* BatteryViewController.xib */,
 			);
-			name = PieChart;
+			name = BatteryIcone;
 			sourceTree = "<group>";
 		};
 		A8AEE48E1C356E0000FD2B89 /* RootAware */ = {
@@ -298,8 +306,8 @@
 		A8C799241C32C30A00D29177 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A811EDD31C38806F00D3D848 /* BatteryIcone */,
 				A8C799251C32C30F00D29177 /* Muse */,
-				A8AEE4591C33FECD00FD2B89 /* PieChart */,
 				A8AEE48E1C356E0000FD2B89 /* RootAware */,
 			);
 			name = Utils;
@@ -409,6 +417,7 @@
 				A8F67B941C33E0A3004FB5C6 /* Main.storyboard in Resources */,
 				A8F67B911C33E022004FB5C6 /* Images.xcassets in Resources */,
 				A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */,
+				A811EDDA1C38823000D3D848 /* BatteryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +487,7 @@
 				A8F67B731C33DF34004FB5C6 /* main.m in Sources */,
 				A8F67B8A1C33DF66004FB5C6 /* MenuViewController.m in Sources */,
 				A8F67B871C33DF66004FB5C6 /* CustomViewController.m in Sources */,
+				A811EDD91C38823000D3D848 /* BatteryViewController.m in Sources */,
 				A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */,
 				A8F67B761C33DF3F004FB5C6 /* MuseController.m in Sources */,
 				A8F67B8E1C33DF9D004FB5C6 /* AppDelegate.m in Sources */,

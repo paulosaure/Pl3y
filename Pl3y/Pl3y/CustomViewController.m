@@ -23,10 +23,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleHorsesShoeNotification:) name:horsesShoeNotification object:nil];
     
     self.informationLabel.textColor = [UIColor blueColor];
     self.mellowLabel.textColor = [UIColor blueColor];
@@ -44,7 +40,11 @@
                                   @(IXNMuseDataPacketTypeMellow)
                                   ];
     
-    [RootViewController initMuseWithListener:listenedObjects];
+    [RootViewController setMuseWithListener:listenedObjects];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleHorsesShoeNotification:) name:horsesShoeNotification object:nil];
 }
 
 - (void)changeColorBackground:(UIColor *)color

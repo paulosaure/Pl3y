@@ -44,8 +44,6 @@
     switch (packet.packetType) {
         case IXNMuseDataPacketTypeBattery:
             [[NSNotificationCenter defaultCenter] postNotificationName:batteryNotification object:packet.values];
-            //            NSLog(@"battery packet received");
-            //            [self.fileWriter addDataPacket:1 packet:packet];
             break;
         case IXNMuseDataPacketTypeAccelerometer:
             [[NSNotificationCenter defaultCenter] postNotificationName:accelerometerNotification object:packet.values];
@@ -97,15 +95,18 @@
     {
         case IXNConnectionStateDisconnected:
             state = @"disconnected";
+            [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateDisconnected)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"disconnected"];
             //            [self.fileWriter flush];
             break;
         case IXNConnectionStateConnected:
             state = @"connected";
+            [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateConnected)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"connected"];
             break;
         case IXNConnectionStateConnecting:
             state = @"connecting";
+            [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateConnecting)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"connecting"];
             break;
         case IXNConnectionStateNeedsUpdate: state = @"needs update"; break;
@@ -135,7 +136,7 @@
 - (void)reconnectToMuse
 {
     NSLog(@"Reconnect To muse");
-//    [[MuseController sharedInstance] reconnectToMuse];
+    //    [[MuseController sharedInstance] reconnectToMuse];
 }
 
 @end
