@@ -119,8 +119,7 @@
 {
     NSArray *packet = notification.object;
     NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
-    NSLog(@"value %f",[value floatValue]);
-    return [value floatValue];
+    return [value floatValue]*100;
 }
 
 @end
