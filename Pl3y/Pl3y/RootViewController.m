@@ -29,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UIView *fourthSensor;
 
 // Navigation stack
+@property (nonatomic, strong) BatteryViewController* batteryViewController;
+
 @property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
@@ -80,7 +82,6 @@
     // Display the content of the navigation controller into the support view
     [self.supportView addSubview:self.navigationController.view];
     self.navigationController.view.frame = self.supportView.bounds;
-    
     [self.view bringSubviewToFront:self.sensorView];
 }
 
@@ -105,9 +106,9 @@
 
 - (void)configureBatteryView
 {
-    BatteryViewController *battery = [[BatteryViewController alloc] init];
-    battery.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.batteryView.frame), CGRectGetHeight(self.batteryView.frame));
-    [self.batteryView addSubview:battery.view];
+    self.batteryViewController = [[BatteryViewController alloc] init];
+    self.batteryViewController.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.batteryView.frame), CGRectGetHeight(self.batteryView.frame));
+    [self.batteryView addSubview:self.batteryViewController.view];
 }
 
 #pragma mark - Notification
@@ -141,8 +142,8 @@
 
 - (void)receiveConnectionNotification:(NSNotification *)notification
 {
-    IXNConnectionState state = (IXNConnectionState) notification.object;
-    switch (state) {
+    NSNumber *value = (NSNumber *) notification.object;
+    switch ([value intValue]) {
         case IXNConnectionStateConnected:
             self.isConnected.backgroundColor = [UIColor greenColor];
             break;
@@ -182,15 +183,18 @@
 - (UIColor *)setColorSensorView:(NSInteger)value
 {
     switch (value) {
-        case 0:
+        case 1:
             return [UIColor greenColor];
             break;
-        case 1:
+        case 2:
             return  [UIColor orangeColor];
             break;
-        case 2:
+        case 3:
+            return  [UIColor redColor];
+            break;
+        case 4:
         default:
-            return [UIColor redColor];
+            return [UIColor blackColor];
             break;
     }
 }

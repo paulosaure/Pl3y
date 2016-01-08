@@ -15,6 +15,7 @@
 
 + (instancetype)sharedInstance;
 - (void)resumeInstance;
+- (instancetype)initWithDelegate:(AppDelegate *)delegate;
 - (void)reconnectToMuse;
 - (void)registerDataListeners;
 

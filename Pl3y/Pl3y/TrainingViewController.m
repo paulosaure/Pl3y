@@ -14,6 +14,8 @@
 // Data
 @property (nonatomic, strong) NSMutableDictionary *states;
 @property (nonatomic, strong) NSArray *selectedStates;
+@property (nonatomic, strong) StateTrainingView* mellowView;
+@property (nonatomic, strong) StateTrainingView* concentrationView;
 
 @end
 
@@ -57,21 +59,28 @@
     for (NSNumber *state in self.selectedStates)
     {
         CGFloat height = CGRectGetHeight(self.view.frame)/numberOfStateView;
-        StateTrainingView *stateView = [[StateTrainingView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(previousView.frame), CGRectGetWidth(self.view.frame), height)];
         
         switch ([state integerValue]) {
             case IXNMuseDataPacketTypeConcentration:
             {
-                stateView.title = ConcentrationStateViewLabel;
-                stateView.backgroundColor = [UIColor redColor];
-                [self.states setObject:stateView forKey:@(IXNMuseDataPacketTypeConcentration)];
+                self.concentrationView = [[StateTrainingView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(previousView.frame), CGRectGetWidth(self.view.frame), height)];
+                self.concentrationView.title = ConcentrationStateViewLabel;
+                self.concentrationView.backgroundColor = [UIColor redColor];
+                [self.states setObject:self.concentrationView forKey:@(IXNMuseDataPacketTypeConcentration)];
+                [self.concentrationView stateLabelTitle:0.f];
+                [self.view addSubview:self.concentrationView];
+                previousView = self.concentrationView;
                 break;
             }
             case IXNMuseDataPacketTypeMellow:
             {
-                stateView.title = MellowStateViewLabel;
-                stateView.backgroundColor = [UIColor blueColor];
-                [self.states setObject:stateView forKey:@(IXNMuseDataPacketTypeMellow)];
+                self.mellowView = [[StateTrainingView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(previousView.frame), CGRectGetWidth(self.view.frame), height)];
+                self.mellowView.title = MellowStateViewLabel;
+                self.mellowView.backgroundColor = [UIColor blueColor];
+                [self.states setObject:self.mellowView forKey:@(IXNMuseDataPacketTypeMellow)];
+                [self.mellowView stateLabelTitle:0.f];
+                [self.view addSubview:self.mellowView];
+                previousView = self.mellowView;
                 break;
             }
             default:
@@ -79,9 +88,6 @@
                 break;
         }
         
-        [stateView stateLabelTitle:0.f];
-        [self.view addSubview:stateView];
-        previousView = stateView;
     }
 }
 
@@ -92,8 +98,8 @@
 
 - (void)handleMellowNotification:(NSNotification*)note
 {
-    StateTrainingView *mellowView = [self.states objectForKey:@(IXNMuseDataPacketTypeMellow)];
-    [mellowView stateLabelTitle:[self valueWithNotification:note]];
+    self.mellowView = [self.states objectForKey:@(IXNMuseDataPacketTypeMellow)];
+    [self.mellowView stateLabelTitle:[self valueWithNotification:note]];
     
     //    self.mellowLabel.text = [NSString stringWithFormat:@"Mellow : %f", floatValue];
     //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
@@ -102,8 +108,8 @@
 
 - (void)handleConcentrationNotification:(NSNotification*)note
 {
-    StateTrainingView *concentrationView = [self.states objectForKey:@(IXNMuseDataPacketTypeConcentration)];
-    [concentrationView stateLabelTitle:[self valueWithNotification:note]];
+    self.concentrationView = [self.states objectForKey:@(IXNMuseDataPacketTypeConcentration)];
+    [self.concentrationView stateLabelTitle:[self valueWithNotification:note]];
     
     //    self.informationLabel.text = [NSString stringWithFormat:@"Conc : %f", floatValue];
     //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
@@ -114,6 +120,7 @@
 {
     NSArray *packet = notification.object;
     NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
+    NSLog(@"value %f",[value floatValue]);
     return [value floatValue];
 }
 

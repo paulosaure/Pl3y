@@ -33,11 +33,11 @@
 }
 
 
-- (id)init
+- (instancetype)initWithDelegate:(AppDelegate *)delegate
 {
     if (self = [super init])
     {
-
+        self.delegate = delegate;
     }
     
     return self;
@@ -73,7 +73,7 @@
     //     [self.muse runAsynchronously];
     if (!self.loggingListener)
     {
-        self.loggingListener = [[LoggingListener alloc] init];
+        self.loggingListener = [[LoggingListener alloc] initWithDelegate:self.delegate];
     }
     
     

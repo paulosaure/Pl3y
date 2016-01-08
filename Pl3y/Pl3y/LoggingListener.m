@@ -20,7 +20,7 @@
 
 - (instancetype)initWithDelegate:(AppDelegate *)delegate
 {
-    //    _delegate = delegate;
+    _delegate = delegate;
     /**
      * Set <key>UIFileSharingEnabled</key> to true in Info.plist if you want
      * to see the file in iTunes
@@ -95,17 +95,20 @@
     {
         case IXNConnectionStateDisconnected:
             state = @"disconnected";
+            NSLog(@"Value disconnected : %@",@(IXNConnectionStateDisconnected));
             [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateDisconnected)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"disconnected"];
             //            [self.fileWriter flush];
             break;
         case IXNConnectionStateConnected:
             state = @"connected";
+            NSLog(@"Value connected : %@",@(IXNConnectionStateConnected));
             [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateConnected)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"connected"];
             break;
         case IXNConnectionStateConnecting:
             state = @"connecting";
+            NSLog(@"Value connecting : %@",@(IXNConnectionStateConnecting));
             [[NSNotificationCenter defaultCenter] postNotificationName:connectionNotification object:@(IXNConnectionStateConnecting)];
             //            [self.fileWriter addAnnotationString:1 annotation:@"connecting"];
             break;
@@ -127,9 +130,10 @@
         // perform scheduled IO. This is a known issue that will be fixed in a
         // future release of the SDK.
         NSLog(@"DELEGATE NEEDED");
-        //        [self.delegate performSelector:@selector(reconnectToMuse)
-        //                            withObject:nil
-        //                            afterDelay:0];
+        [[MuseController sharedInstance] reconnectToMuse];
+        [self.delegate performSelector:@selector(reconnectToMuse)
+                            withObject:nil
+                            afterDelay:0];
     }
 }
 
