@@ -30,7 +30,6 @@
 
 // Navigation stack
 @property (nonatomic, strong) BatteryViewController* batteryViewController;
-
 @property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
@@ -39,7 +38,7 @@
 
 #pragma mark - Constructor
 
-- (instancetype)initRootViewController
+- (instancetype)initRootViewControllerWithDelegate:(AppDelegate *)delegate
 {
     if (self = [super initWithNibName:@"RootViewController" bundle:nil])
     {
@@ -50,6 +49,9 @@
         self.navigationController.delegate = self;
         self.navigationController.navigationBarHidden = YES;
         [self addChildViewController:self.navigationController];
+        
+        MuseController *muse = [MuseController sharedInstance];
+        muse.delegate = delegate;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveConnectionNotification:) name:connectionNotification object:nil];
     }
@@ -82,6 +84,7 @@
     // Display the content of the navigation controller into the support view
     [self.supportView addSubview:self.navigationController.view];
     self.navigationController.view.frame = self.supportView.bounds;
+    
     [self.view bringSubviewToFront:self.sensorView];
 }
 

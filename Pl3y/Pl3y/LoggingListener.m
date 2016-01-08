@@ -130,7 +130,6 @@
         // perform scheduled IO. This is a known issue that will be fixed in a
         // future release of the SDK.
         NSLog(@"DELEGATE NEEDED");
-        [[MuseController sharedInstance] reconnectToMuse];
         [self.delegate performSelector:@selector(reconnectToMuse)
                             withObject:nil
                             afterDelay:0];
@@ -140,7 +139,7 @@
 - (void)reconnectToMuse
 {
     NSLog(@"Reconnect To muse");
-    //    [[MuseController sharedInstance] reconnectToMuse];
+    [[MuseController sharedInstance] reconnectToMuse];
 }
 
 @end

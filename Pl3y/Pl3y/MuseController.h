@@ -15,11 +15,11 @@
 
 + (instancetype)sharedInstance;
 - (void)resumeInstance;
-- (instancetype)initWithDelegate:(AppDelegate *)delegate;
 - (void)reconnectToMuse;
 - (void)registerDataListeners;
 
 @property (strong, nonatomic) id<IXNMuse> muse;
 @property (strong, nonatomic) NSArray *listenedObjects;
+@property (strong, nonatomic) AppDelegate *delegate;
 
 @end

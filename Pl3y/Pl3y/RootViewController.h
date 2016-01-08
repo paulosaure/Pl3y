@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
+
 @interface RootViewController : UIViewController
 
-- (instancetype)initRootViewController;
+- (instancetype)initRootViewControllerWithDelegate:(AppDelegate *)delegate;
 + (void)setMuseWithListener:(NSArray *)listeners;
 
 @end

@@ -14,7 +14,6 @@
 @property (strong, nonatomic) IXNMuseManager *manager;
 @property (strong, nonatomic) LoggingListener *loggingListener;
 @property (strong, nonatomic) NSTimer *musePickerTimer;
-@property (strong, nonatomic) AppDelegate *delegate;
 
 @end
 
@@ -30,17 +29,6 @@
     });
     
     return sharedInstance;
-}
-
-
-- (instancetype)initWithDelegate:(AppDelegate *)delegate
-{
-    if (self = [super init])
-    {
-        self.delegate = delegate;
-    }
-    
-    return self;
 }
 
 - (void)resumeInstance

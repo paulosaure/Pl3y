@@ -87,7 +87,6 @@
                 NSLog(@"Problem : Not a mellow or concentration view");
                 break;
         }
-        
     }
 }
 

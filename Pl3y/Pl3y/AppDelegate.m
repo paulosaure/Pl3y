@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window.rootViewController = [[RootViewController alloc] initRootViewController];
+    self.window.rootViewController = [[RootViewController alloc] initRootViewControllerWithDelegate:self];
     [self.window makeKeyAndVisible];
     
     return YES;
