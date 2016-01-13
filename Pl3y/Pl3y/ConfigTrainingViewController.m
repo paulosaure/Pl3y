@@ -21,6 +21,8 @@
 
 @implementation ConfigTrainingViewController
 
+#pragma mark - View lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,6 +43,7 @@
 
 
 #pragma mark - Actions
+
 - (IBAction)selectSpiritState:(UIButton *)sender
 {
     sender.selected = !sender.selected;

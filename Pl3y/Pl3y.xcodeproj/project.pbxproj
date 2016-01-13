@@ -388,7 +388,7 @@
 				TargetAttributes = {
 					5401E0171A93DA2600FADC22 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = FU8BX37VRD;
+						DevelopmentTeam = DM4F765E5B;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -656,7 +656,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";
 			};
@@ -694,7 +694,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";
 			};

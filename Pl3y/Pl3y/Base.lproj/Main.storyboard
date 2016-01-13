@@ -152,6 +152,57 @@
                     <view key="view" contentMode="scaleToFill" id="l4m-YZ-hHF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEX-Re-DaE">
+                                <rect key="frame" x="94" y="110" width="73" height="30"/>
+                                <state key="normal" title="Volume up"/>
+                                <connections>
+                                    <action selector="volumeUp:" destination="uuC-qD-btm" eventType="touchUpInside" id="Jor-MO-JyO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfD-jm-S1H">
+                                <rect key="frame" x="84" y="164" width="93" height="30"/>
+                                <state key="normal" title="Volume down"/>
+                                <connections>
+                                    <action selector="volumeDown:" destination="uuC-qD-btm" eventType="touchUpInside" id="CZY-qQ-fYb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LT-wz-KYN">
+                                <rect key="frame" x="95" y="229" width="70" height="30"/>
+                                <state key="normal" title="Next song"/>
+                                <connections>
+                                    <action selector="nextSong:" destination="uuC-qD-btm" eventType="touchUpInside" id="l24-Tr-iNm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-tz-SKf">
+                                <rect key="frame" x="109" y="385" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="uuC-qD-btm" eventType="touchUpInside" id="Y06-Zl-2Bi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOL-sG-yxo">
+                                <rect key="frame" x="113" y="438" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startMusic:" destination="uuC-qD-btm" eventType="touchUpInside" id="04l-gW-eRQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuT-HV-Wit">
+                                <rect key="frame" x="107" y="278" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartMusic:" destination="uuC-qD-btm" eventType="touchUpInside" id="eXO-UD-dm6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-5R-wlZ">
+                                <rect key="frame" x="84" y="330" width="97" height="30"/>
+                                <state key="normal" title="Previous song"/>
+                                <connections>
+                                    <action selector="previousSong:" destination="uuC-qD-btm" eventType="touchUpInside" id="utJ-pw-HdA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
