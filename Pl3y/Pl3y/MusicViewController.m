@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadPlaylist];
+    [self initPlaylist];
     [self configureVolume];
     
     self.musicController = [MPMusicPlayerController systemMusicPlayer];
@@ -51,16 +51,15 @@
      }];
 }
 
-- (void)loadPlaylist
+- (void)initPlaylist
 {
     // Retrieve all musics
-    MPMediaQuery *fullList = [[MPMediaQuery alloc] init];
-    NSArray *mediaList = [fullList items];
+//    MPMediaQuery *fullList = [[MPMediaQuery alloc] init];
+//    NSArray *mediaList = [fullList items];
     
     // Retrieve all playlists
     MPMediaQuery *myPlaylistsQuery = [MPMediaQuery playlistsQuery];
     NSArray *playlists = [myPlaylistsQuery collections];
-    self.currentPlaylist = [playlists objectAtIndex:10];
     
     for (MPMediaPlaylist *playlist in playlists)
     {
@@ -74,6 +73,10 @@
             NSLog (@"\t\t%@ - Comment : %@", songTitle, songComments);
         }
     }
+    
+    // Select a playlist
+    NSInteger randomPlaylist = arc4random_uniform([playlists count]);
+    self.currentPlaylist = [playlists objectAtIndex:randomPlaylist];
     
     // Init music controller with playlist
     [self.musicController setQueueWithItemCollection:self.currentPlaylist];
