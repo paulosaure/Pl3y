@@ -12,7 +12,7 @@
 }
 @property (nonatomic) BOOL lastBlink;
 @property (nonatomic) BOOL sawOneBlink;
-@property (nonatomic, weak) AppDelegate* delegate;
+@property (nonatomic, strong) AppDelegate* delegate;
 @property (nonatomic) id<IXNMuseFileWriter> fileWriter;
 @end
 
@@ -136,10 +136,5 @@
     }
 }
 
-- (void)reconnectToMuse
-{
-    NSLog(@"Reconnect To muse");
-    [[MuseController sharedInstance] reconnectToMuse];
-}
 
 @end

@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define ConcentrationStateViewLabel @"Concentration"
-#define MellowStateViewLabel        @"Mellow"
+#define ConcentrationStateViewLabel @"C"
+#define MellowStateViewLabel        @"M"
 
 @interface StateTrainingView : UIView
 

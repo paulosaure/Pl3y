@@ -56,6 +56,7 @@
 {
     UIView *previousView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     NSInteger numberOfStateView = [self.selectedStates count];
+    self.states = [NSMutableDictionary dictionary];
     for (NSNumber *state in self.selectedStates)
     {
         CGFloat height = CGRectGetHeight(self.view.frame)/numberOfStateView;
@@ -98,27 +99,26 @@
 - (void)handleMellowNotification:(NSNotification*)note
 {
     self.mellowView = [self.states objectForKey:@(IXNMuseDataPacketTypeMellow)];
-    [self.mellowView stateLabelTitle:[self valueWithNotification:note]];
-    
-    //    self.mellowLabel.text = [NSString stringWithFormat:@"Mellow : %f", floatValue];
-    //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
-    //    [self changeColorBackground:color];
+    CGFloat floatValue = [self valueWithNotification:note];
+    [self.mellowView stateLabelTitle:floatValue];
+    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
+    self.mellowView.backgroundColor = color;
 }
 
 - (void)handleConcentrationNotification:(NSNotification*)note
 {
     self.concentrationView = [self.states objectForKey:@(IXNMuseDataPacketTypeConcentration)];
-    [self.concentrationView stateLabelTitle:[self valueWithNotification:note]];
-    
-    //    self.informationLabel.text = [NSString stringWithFormat:@"Conc : %f", floatValue];
-    //    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
-    //    [self changeColorBackground:color];
+    CGFloat floatValue = [self valueWithNotification:note];
+    [self.concentrationView stateLabelTitle:floatValue];
+    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
+    self.concentrationView.backgroundColor = color;
 }
 
 - (CGFloat)valueWithNotification:(NSNotification *)notification
 {
     NSArray *packet = notification.object;
     NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
+    // NSLog(@"value : %@ - %f",value, [value floatValue]);
     return [value floatValue]*100;
 }
 

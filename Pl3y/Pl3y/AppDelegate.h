@@ -8,6 +8,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+- (void)reconnectToMuse;
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end

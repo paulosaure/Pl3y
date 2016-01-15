@@ -35,4 +35,10 @@
     [MuseController sharedInstance].muse = nil;
 }
 
+- (void)reconnectToMuse
+{
+    NSLog(@"Reconnect To muse");
+    [[MuseController sharedInstance] reconnectToMuse];
+}
+
 @end
