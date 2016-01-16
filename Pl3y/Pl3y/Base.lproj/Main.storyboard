@@ -202,9 +202,25 @@
                                     <action selector="previousSong:" destination="uuC-qD-btm" eventType="touchUpInside" id="utJ-pw-HdA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXG-Bb-PjT">
+                                <rect key="frame" x="37" y="0.0" width="359" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-ko-aP6">
+                                <rect key="frame" x="59" y="487" width="71" height="30"/>
+                                <state key="normal" title="Echo Nest"/>
+                                <connections>
+                                    <action selector="testGETButtonAction:" destination="uuC-qD-btm" eventType="touchUpInside" id="cNu-Ar-hAA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="echoNestLabel" destination="FXG-Bb-PjT" id="adr-Ko-lZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ji-ez-zpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,8 +14,8 @@
 // Data
 @property (nonatomic, strong) NSMutableDictionary *states;
 @property (nonatomic, strong) NSArray *selectedStates;
-@property (nonatomic, strong) StateTrainingView* mellowView;
-@property (nonatomic, strong) StateTrainingView* concentrationView;
+@property (nonatomic, strong) StateTrainingView *mellowView;
+@property (nonatomic, strong) StateTrainingView *concentrationView;
 
 @end
 
@@ -96,29 +96,27 @@
     self.view.backgroundColor = color;
 }
 
-- (void)handleMellowNotification:(NSNotification*)note
+- (void)handleMellowNotification:(NSNotification *)note
 {
-    self.mellowView = [self.states objectForKey:@(IXNMuseDataPacketTypeMellow)];
-    CGFloat floatValue = [self valueWithNotification:note];
-    [self.mellowView stateLabelTitle:floatValue];
-    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
-    self.mellowView.backgroundColor = color;
+    [self updateTrainingView:self.mellowView type:IXNMuseDataPacketTypeMellow value:[self valueWithNotification:note]];
 }
 
-- (void)handleConcentrationNotification:(NSNotification*)note
+- (void)handleConcentrationNotification:(NSNotification *)note
 {
-    self.concentrationView = [self.states objectForKey:@(IXNMuseDataPacketTypeConcentration)];
-    CGFloat floatValue = [self valueWithNotification:note];
-    [self.concentrationView stateLabelTitle:floatValue];
-    UIColor *color = [UIColor colorWithRed:floatValue green:0 blue:0 alpha:1];
-    self.concentrationView.backgroundColor = color;
+    [self updateTrainingView:self.concentrationView type:IXNMuseDataPacketTypeConcentration value:[self valueWithNotification:note]];
+}
+
+- (void)updateTrainingView:(StateTrainingView *)view type:(IXNMuseDataPacketType)type value:(CGFloat)value
+{
+    view = [self.states objectForKey:@(type)];
+    [view stateLabelTitle:value];
+    view.backgroundColor = [UIColor colorWithRed:value green:0 blue:0 alpha:1];
 }
 
 - (CGFloat)valueWithNotification:(NSNotification *)notification
 {
     NSArray *packet = notification.object;
     NSNumber *value = (NSNumber *)[packet objectAtIndex:0];
-    // NSLog(@"value : %@ - %f",value, [value floatValue]);
     return [value floatValue]*100;
 }
 

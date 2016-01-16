@@ -14,11 +14,18 @@
 		A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A837744D1C33F3F90069B6A6 /* Charts.framework */; };
 		A85945CD1C38B8AC00555CB8 /* StateTrainingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85945CC1C38B8AC00555CB8 /* StateTrainingView.xib */; };
 		A85945D01C38B8C000555CB8 /* StateTrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85945CF1C38B8C000555CB8 /* StateTrainingView.m */; };
+		A85C06C31C4AF81B00A0AB3F /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85C06C21C4AF81B00A0AB3F /* libMuse.a */; };
+		A85C06C51C4AF87800A0AB3F /* libechonest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85C06C41C4AF87800A0AB3F /* libechonest.a */; };
 		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
 		A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE4731C343AA900FD2B89 /* RootViewController.m */; };
 		A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AEE4891C3566B700FD2B89 /* RootViewController.xib */; };
 		A8AEE48D1C35681C00FD2B89 /* RootAwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE48C1C35681C00FD2B89 /* RootAwareViewController.m */; };
-		A8C799211C317C7500D29177 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C799201C317C7500D29177 /* libMuse.a */; };
+		A8BD02CD1C4A938100A21F36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02CC1C4A938100A21F36 /* AVFoundation.framework */; };
+		A8BD02CF1C4A938600A21F36 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02CE1C4A938600A21F36 /* CFNetwork.framework */; };
+		A8BD02D11C4A938E00A21F36 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02D01C4A938E00A21F36 /* MediaPlayer.framework */; };
+		A8BD02D31C4A939500A21F36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02D21C4A939500A21F36 /* MobileCoreServices.framework */; };
+		A8BD02D51C4A939A00A21F36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02D41C4A939A00A21F36 /* SystemConfiguration.framework */; };
+		A8BD02D71C4A93E500A21F36 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BD02D61C4A93E500A21F36 /* libz.tbd */; };
 		A8F67B731C33DF34004FB5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B701C33DF34004FB5C6 /* main.m */; };
 		A8F67B761C33DF3F004FB5C6 /* MuseController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B751C33DF3F004FB5C6 /* MuseController.m */; };
 		A8F67B791C33DF52004FB5C6 /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F67B781C33DF52004FB5C6 /* LoggingListener.m */; };
@@ -69,6 +76,9 @@
 		A85945CC1C38B8AC00555CB8 /* StateTrainingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateTrainingView.xib; sourceTree = "<group>"; };
 		A85945CE1C38B8C000555CB8 /* StateTrainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateTrainingView.h; sourceTree = "<group>"; };
 		A85945CF1C38B8C000555CB8 /* StateTrainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateTrainingView.m; sourceTree = "<group>"; };
+		A85C06C11C4AF4F800A0AB3F /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EchoNest.h; path = Pl3y/EchoNest.h; sourceTree = SOURCE_ROOT; };
+		A85C06C21C4AF81B00A0AB3F /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = Muse/libMuse.a; sourceTree = "<group>"; };
+		A85C06C41C4AF87800A0AB3F /* libechonest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libechonest.a; sourceTree = "<group>"; };
 		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
 		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 		A8AEE4721C343AA900FD2B89 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -76,8 +86,12 @@
 		A8AEE4891C3566B700FD2B89 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		A8AEE48B1C35681C00FD2B89 /* RootAwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootAwareViewController.h; sourceTree = "<group>"; };
 		A8AEE48C1C35681C00FD2B89 /* RootAwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootAwareViewController.m; sourceTree = "<group>"; };
-		A8C7991D1C317C1C00D29177 /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Muse.h; path = MuseStatsIos/Muse/Muse.h; sourceTree = "<group>"; };
-		A8C799201C317C7500D29177 /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = MuseStatsIos/Muse/libMuse.a; sourceTree = "<group>"; };
+		A8BD02CC1C4A938100A21F36 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A8BD02CE1C4A938600A21F36 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A8BD02D01C4A938E00A21F36 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A8BD02D21C4A939500A21F36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A8BD02D41C4A939A00A21F36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8BD02D61C4A93E500A21F36 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A8D8DBD21C33E20100B5D9D6 /* Pl3y-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Pl3y-Prefix.pch"; path = "Pl3y/Pl3y-Prefix.pch"; sourceTree = "<group>"; };
 		A8F67B6F1C33DF34004FB5C6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pl3y/Info.plist; sourceTree = "<group>"; };
 		A8F67B701C33DF34004FB5C6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Pl3y/main.m; sourceTree = "<group>"; };
@@ -107,9 +121,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BD02D71C4A93E500A21F36 /* libz.tbd in Frameworks */,
+				A8BD02D51C4A939A00A21F36 /* SystemConfiguration.framework in Frameworks */,
+				A8BD02D31C4A939500A21F36 /* MobileCoreServices.framework in Frameworks */,
+				A85C06C31C4AF81B00A0AB3F /* libMuse.a in Frameworks */,
+				A8BD02D11C4A938E00A21F36 /* MediaPlayer.framework in Frameworks */,
+				A8BD02CF1C4A938600A21F36 /* CFNetwork.framework in Frameworks */,
+				A8BD02CD1C4A938100A21F36 /* AVFoundation.framework in Frameworks */,
 				E94FB6F01B03B53400B73B4B /* libc++.dylib in Frameworks */,
 				A836E4061C33FA660078A9D7 /* Charts.framework in Frameworks */,
-				A8C799211C317C7500D29177 /* libMuse.a in Frameworks */,
+				A85C06C51C4AF87800A0AB3F /* libechonest.a in Frameworks */,
 				698B046D36E303AA3ABFBAA4 /* Pods_Pl3y.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				A8C798D91C316DB700D29177 /* Externals */,
-				E94FB6EF1B03B53400B73B4B /* libc++.dylib */,
 				5401E01A1A93DA2600FADC22 /* Pl3y */,
 				5401E0341A93DA2600FADC22 /* MuseStatsIosTests */,
 				5401E0191A93DA2600FADC22 /* Products */,
@@ -187,6 +207,12 @@
 		62262D3B44C67B939FC64CC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8BD02D61C4A93E500A21F36 /* libz.tbd */,
+				A8BD02D41C4A939A00A21F36 /* SystemConfiguration.framework */,
+				A8BD02D21C4A939500A21F36 /* MobileCoreServices.framework */,
+				A8BD02D01C4A938E00A21F36 /* MediaPlayer.framework */,
+				A8BD02CE1C4A938600A21F36 /* CFNetwork.framework */,
+				A8BD02CC1C4A938100A21F36 /* AVFoundation.framework */,
 				A837744D1C33F3F90069B6A6 /* Charts.framework */,
 				B2D80E06800889378D389368 /* Pods_Pl3y.framework */,
 			);
@@ -231,11 +257,20 @@
 			name = RootAware;
 			sourceTree = "<group>";
 		};
+		A8BD02DA1C4A976500A21F36 /* EchoNest */ = {
+			isa = PBXGroup;
+			children = (
+				A85C06C41C4AF87800A0AB3F /* libechonest.a */,
+				A85C06C11C4AF4F800A0AB3F /* EchoNest.h */,
+				A8C799251C32C30F00D29177 /* Muse */,
+			);
+			path = EchoNest;
+			sourceTree = "<group>";
+		};
 		A8C798D91C316DB700D29177 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
-				A8C799201C317C7500D29177 /* libMuse.a */,
-				A8C7991D1C317C1C00D29177 /* Muse.h */,
+				E94FB6EF1B03B53400B73B4B /* libc++.dylib */,
 			);
 			name = Externals;
 			sourceTree = "<group>";
@@ -317,7 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				A811EDD31C38806F00D3D848 /* BatteryIcone */,
-				A8C799251C32C30F00D29177 /* Muse */,
+				A8BD02DA1C4A976500A21F36 /* EchoNest */,
 				A8AEE48E1C356E0000FD2B89 /* RootAware */,
 				A85945C91C38B5DF00555CB8 /* StateTrainingView */,
 			);
@@ -327,12 +362,14 @@
 		A8C799251C32C30F00D29177 /* Muse */ = {
 			isa = PBXGroup;
 			children = (
+				A85C06C21C4AF81B00A0AB3F /* libMuse.a */,
 				A8F67B8F1C33DFB3004FB5C6 /* Muse.h */,
 				A8F67B741C33DF3F004FB5C6 /* MuseController.h */,
 				A8F67B751C33DF3F004FB5C6 /* MuseController.m */,
 				A8C799231C317CB400D29177 /* Listener */,
 			);
 			name = Muse;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,7 +425,7 @@
 				TargetAttributes = {
 					5401E0171A93DA2600FADC22 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = FU8BX37VRD;
+						DevelopmentTeam = DM4F765E5B;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -545,6 +582,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					arm64,
+					armv7s,
+					armv7,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -580,7 +623,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -590,6 +638,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					arm64,
+					armv7s,
+					armv7,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -617,7 +671,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -637,6 +697,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(BUILT_PRODUCTS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks\n$(SDKROOT)/Developer/Library/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pl3y/Pl3y-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -651,12 +712,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pl3y",
 					"$(PROJECT_DIR)/Pl3y/Muse",
+					"$(PROJECT_DIR)/Pl3y/EchoNest",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";
 			};
@@ -675,6 +737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(BUILT_PRODUCTS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks\n$(SDKROOT)/Developer/Library/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pl3y/Pl3y-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -689,12 +752,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pl3y",
 					"$(PROJECT_DIR)/Pl3y/Muse",
+					"$(PROJECT_DIR)/Pl3y/EchoNest",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.Pl3y;
 				PRODUCT_NAME = Pl3y;
 				PROVISIONING_PROFILE = "";
 			};

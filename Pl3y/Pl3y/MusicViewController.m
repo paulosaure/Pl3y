@@ -10,12 +10,14 @@
 #import <MediaPlayer/MPMediaPlaylist.h>
 #import <MediaPlayer/MPMediaQuery.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "EchoNest.h"
 
 @interface MusicViewController ()
 
 @property (nonatomic, strong) UISlider *volumeSlider;
 @property (nonatomic, strong) MPMediaItemCollection *currentPlaylist;
 @property (nonatomic, strong) MPMusicPlayerController *musicController;
+@property (weak, nonatomic) IBOutlet UILabel *echoNestLabel;
 
 @end
 
@@ -30,6 +32,51 @@
     [self configureVolume];
     
     self.musicController = [MPMusicPlayerController systemMusicPlayer];
+}
+
+- (IBAction)testGETButtonAction:(id)sender
+{
+    [ENAPI initWithApiKey:@"SRXVQ1NIU3ZL7W0ZN" ConsumerKey:@"274d310b15a17ff76fe5ddc5470c20f4" AndSharedSecret:@"gjOlBQGoR++lmibbBQiQYQ"];
+    
+    ENAPIRequest *request = [ENAPIRequest requestWithEndpoint:@"artist/blogs"];
+    request.delegate = self;                              // our class implements ENAPIRequestDelegate
+    [request setValue:@"Radiohead" forParameter:@"name"]; // name=Radiohead
+    [request setIntegerValue:15 forParameter:@"results"]; // results=15
+    [request startAsynchronous];
+    
+    [request setBoolValue:YES forParameter:@"fuzzy_match"];
+    [request setFloatValue:0.5f forParameter:@"min_hotttnesss"];
+    // multiple values
+    NSArray *descriptions = [NSArray arrayWithObjects:@"mood:chill", @"location:london", nil];
+    [request setValue:descriptions forParameter:@"description"];
+    
+    [request startAsynchronous];
+    NSLog(@"Request 1");
+
+    //
+    //    ENAPIRequest * req = [[ENAPIRequest alloc] initWithEndpoint:@"sandbox/access"];
+    //
+    //    // Note - you must agree to the sandbox terms of service to gain
+    //    //        access to the individual artist sandboxes
+    //
+    //    [req setValue:@"assetId text" forParameter:@"id"];     // id={desired-asset}
+    //    [req setValue:@"emi_gorillaz" forParameter:@"sandbox"]; // sandbox=emi_gorillaz
+    //
+    //    req.delegate = self;                        // our class implements ENAPIRequestDelegate
+    //
+    //    [req startAsynchronous];
+}
+
+//- (void)requestFinished:(ENAPIRequest *)request
+//{
+//    NSAssert1(200 == request.responseStatusCode, @"Expected 200 OK, Got: %ld", request.responseStatusCode);
+//    NSLog(@"Request Finished");
+//    NSArray *blogs = [request.response valueForKeyPath:@"response.blogs"];
+//}
+
+- (void)requestFailed:(ENAPIRequest *)request
+{
+    NSLog(@"Request Failed");
 }
 
 - (void)configureVolume
@@ -61,6 +108,12 @@
     MPMediaQuery *myPlaylistsQuery = [MPMediaQuery playlistsQuery];
     NSArray *playlists = [myPlaylistsQuery collections];
     
+    if ([playlists count] == 0)
+    {
+        NSLog(@"You have 0 playlists ...");
+        return;
+    }
+    
     for (MPMediaPlaylist *playlist in playlists)
     {
         NSLog (@"%@", [playlist valueForProperty: MPMediaPlaylistPropertyName]);
@@ -74,9 +127,8 @@
         }
     }
     
-    // Select a playlist
-    NSInteger randomPlaylist = arc4random_uniform([playlists count]);
-    self.currentPlaylist = [playlists objectAtIndex:randomPlaylist];
+    // Select a random playlist
+    self.currentPlaylist = [playlists objectAtIndex:arc4random_uniform((uint32_t)[playlists count])];
     
     // Init music controller with playlist
     [self.musicController setQueueWithItemCollection:self.currentPlaylist];
