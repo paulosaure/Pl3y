@@ -16,6 +16,7 @@
 		A85945D01C38B8C000555CB8 /* StateTrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85945CF1C38B8C000555CB8 /* StateTrainingView.m */; };
 		A85C06C31C4AF81B00A0AB3F /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85C06C21C4AF81B00A0AB3F /* libMuse.a */; };
 		A85C06C51C4AF87800A0AB3F /* libechonest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85C06C41C4AF87800A0AB3F /* libechonest.a */; };
+		A89763C11C57EE5D0060BC5C /* ExperimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89763C01C57EE5D0060BC5C /* ExperimentViewController.m */; };
 		A8AEE46E1C34182300FD2B89 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */; };
 		A8AEE4751C343AA900FD2B89 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE4731C343AA900FD2B89 /* RootViewController.m */; };
 		A8AEE48A1C3566B700FD2B89 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AEE4891C3566B700FD2B89 /* RootViewController.xib */; };
@@ -79,6 +80,8 @@
 		A85C06C11C4AF4F800A0AB3F /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EchoNest.h; path = Pl3y/EchoNest.h; sourceTree = SOURCE_ROOT; };
 		A85C06C21C4AF81B00A0AB3F /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = Muse/libMuse.a; sourceTree = "<group>"; };
 		A85C06C41C4AF87800A0AB3F /* libechonest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libechonest.a; sourceTree = "<group>"; };
+		A89763BF1C57EE5D0060BC5C /* ExperimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperimentViewController.h; sourceTree = "<group>"; };
+		A89763C01C57EE5D0060BC5C /* ExperimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperimentViewController.m; sourceTree = "<group>"; };
 		A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
 		A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 		A8AEE4721C343AA900FD2B89 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -248,6 +251,63 @@
 			name = StateTrainingView;
 			sourceTree = "<group>";
 		};
+		A89763B91C57EE130060BC5C /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				A8F67B7C1C33DF66004FB5C6 /* TrainingViewController.h */,
+				A8F67B7D1C33DF66004FB5C6 /* TrainingViewController.m */,
+				A8F67B7A1C33DF66004FB5C6 /* ConfigTrainingViewController.h */,
+				A8F67B7B1C33DF66004FB5C6 /* ConfigTrainingViewController.m */,
+			);
+			name = Training;
+			sourceTree = "<group>";
+		};
+		A89763BA1C57EE180060BC5C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A8F67B841C33DF66004FB5C6 /* MusicViewController.h */,
+				A8F67B851C33DF66004FB5C6 /* MusicViewController.m */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		A89763BB1C57EE1F0060BC5C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A8F67B821C33DF66004FB5C6 /* MenuViewController.h */,
+				A8F67B831C33DF66004FB5C6 /* MenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		A89763BC1C57EE230060BC5C /* Experiment */ = {
+			isa = PBXGroup;
+			children = (
+				A89763BF1C57EE5D0060BC5C /* ExperimentViewController.h */,
+				A89763C01C57EE5D0060BC5C /* ExperimentViewController.m */,
+			);
+			name = Experiment;
+			sourceTree = "<group>";
+		};
+		A89763BD1C57EE2A0060BC5C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A8AEE4721C343AA900FD2B89 /* RootViewController.h */,
+				A8AEE4731C343AA900FD2B89 /* RootViewController.m */,
+				A8AEE4891C3566B700FD2B89 /* RootViewController.xib */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		A89763BE1C57EE3B0060BC5C /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */,
+				A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */,
+			);
+			name = PieChart;
+			sourceTree = "<group>";
+		};
 		A8AEE48E1C356E0000FD2B89 /* RootAware */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,19 +375,12 @@
 		A8C798DF1C316E0700D29177 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A8F67B7A1C33DF66004FB5C6 /* ConfigTrainingViewController.h */,
-				A8F67B7B1C33DF66004FB5C6 /* ConfigTrainingViewController.m */,
-				A8AEE4721C343AA900FD2B89 /* RootViewController.h */,
-				A8AEE4731C343AA900FD2B89 /* RootViewController.m */,
-				A8AEE4891C3566B700FD2B89 /* RootViewController.xib */,
-				A8AEE46B1C34182300FD2B89 /* PieChartViewController.h */,
-				A8AEE46C1C34182300FD2B89 /* PieChartViewController.m */,
-				A8F67B821C33DF66004FB5C6 /* MenuViewController.h */,
-				A8F67B831C33DF66004FB5C6 /* MenuViewController.m */,
-				A8F67B841C33DF66004FB5C6 /* MusicViewController.h */,
-				A8F67B851C33DF66004FB5C6 /* MusicViewController.m */,
-				A8F67B7C1C33DF66004FB5C6 /* TrainingViewController.h */,
-				A8F67B7D1C33DF66004FB5C6 /* TrainingViewController.m */,
+				A89763BE1C57EE3B0060BC5C /* PieChart */,
+				A89763BD1C57EE2A0060BC5C /* Root */,
+				A89763BC1C57EE230060BC5C /* Experiment */,
+				A89763BB1C57EE1F0060BC5C /* Menu */,
+				A89763BA1C57EE180060BC5C /* Music */,
+				A89763B91C57EE130060BC5C /* Training */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -545,6 +598,7 @@
 				A85945D01C38B8C000555CB8 /* StateTrainingView.m in Sources */,
 				A8F67B8B1C33DF66004FB5C6 /* MusicViewController.m in Sources */,
 				A8F67B791C33DF52004FB5C6 /* LoggingListener.m in Sources */,
+				A89763C11C57EE5D0060BC5C /* ExperimentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

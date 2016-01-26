@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -288,7 +289,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0y-l7-sHD">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je9-uF-ZBp">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
@@ -338,7 +339,13 @@
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" id="5do-M6-JeB"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="top" id="Iir-kv-3M6"/>
                             <constraint firstAttribute="trailing" secondItem="x0y-l7-sHD" secondAttribute="trailing" id="Y0M-1j-AHO"/>
+                            <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="topMargin" constant="70" id="zQq-Og-NB9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iir-kv-3M6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="actionContentView" destination="x0y-l7-sHD" id="Lq1-TV-uFb"/>
