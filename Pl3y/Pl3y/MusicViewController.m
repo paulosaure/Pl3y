@@ -10,7 +10,6 @@
 #import <MediaPlayer/MPMediaPlaylist.h>
 #import <MediaPlayer/MPMediaQuery.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "EchoNest.h"
 
 @interface MusicViewController ()
 
@@ -36,21 +35,21 @@
 
 - (IBAction)testGETButtonAction:(id)sender
 {
-    [ENAPI initWithApiKey:@"SRXVQ1NIU3ZL7W0ZN" ConsumerKey:@"274d310b15a17ff76fe5ddc5470c20f4" AndSharedSecret:@"gjOlBQGoR++lmibbBQiQYQ"];
-    
-    ENAPIRequest *request = [ENAPIRequest requestWithEndpoint:@"artist/blogs"];
-    request.delegate = self;                              // our class implements ENAPIRequestDelegate
-    [request setValue:@"Radiohead" forParameter:@"name"]; // name=Radiohead
-    [request setIntegerValue:15 forParameter:@"results"]; // results=15
-    [request startAsynchronous];
-    
-    [request setBoolValue:YES forParameter:@"fuzzy_match"];
-    [request setFloatValue:0.5f forParameter:@"min_hotttnesss"];
-    // multiple values
-    NSArray *descriptions = [NSArray arrayWithObjects:@"mood:chill", @"location:london", nil];
-    [request setValue:descriptions forParameter:@"description"];
-    
-    [request startAsynchronous];
+//    [ENAPI initWithApiKey:@"SRXVQ1NIU3ZL7W0ZN" ConsumerKey:@"274d310b15a17ff76fe5ddc5470c20f4" AndSharedSecret:@"gjOlBQGoR++lmibbBQiQYQ"];
+//    
+//    ENAPIRequest *request = [ENAPIRequest requestWithEndpoint:@"artist/blogs"];
+//    request.delegate = self;                              // our class implements ENAPIRequestDelegate
+//    [request setValue:@"Radiohead" forParameter:@"name"]; // name=Radiohead
+//    [request setIntegerValue:15 forParameter:@"results"]; // results=15
+//    [request startAsynchronous];
+//    
+//    [request setBoolValue:YES forParameter:@"fuzzy_match"];
+//    [request setFloatValue:0.5f forParameter:@"min_hotttnesss"];
+//    // multiple values
+//    NSArray *descriptions = [NSArray arrayWithObjects:@"mood:chill", @"location:london", nil];
+//    [request setValue:descriptions forParameter:@"description"];
+//    
+//    [request startAsynchronous];
     NSLog(@"Request 1");
 
     //
@@ -74,10 +73,10 @@
 //    NSArray *blogs = [request.response valueForKeyPath:@"response.blogs"];
 //}
 
-- (void)requestFailed:(ENAPIRequest *)request
-{
-    NSLog(@"Request Failed");
-}
+//- (void)requestFailed:(ENAPIRequest *)request
+//{
+//    NSLog(@"Request Failed");
+//}
 
 - (void)configureVolume
 {
