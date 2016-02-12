@@ -213,7 +213,6 @@
     NSString *fileName = path;
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];
     [text writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    [text writeToFile:filePath atomically:NO encoding:NSUTF8StringEncoding error:nil];
     [NSFileHandle fileHandleForWritingAtPath:filePath];
     
 //    NSLog(@"Path : %@", filePath);
