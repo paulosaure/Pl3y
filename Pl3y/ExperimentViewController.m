@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fromTextField;
 @property (weak, nonatomic) IBOutlet UITextField *activityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *contentTextField;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 
 // Data
@@ -111,6 +112,7 @@
     
     [self.repeatingTimer invalidate];
     self.seconde = 0;
+    self.resultLabel.text = @"";
     self.timeLabel.text = [NSString stringWithFormat:@"%ld", (long)self.seconde];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                       target:self
@@ -156,6 +158,8 @@
     [self writeDeltaFile:@"référence_delta.txt"];
     [self writeGammaFile:@"référence_gamma.txt"];
     [self writeThetaFile:@"référence_theta.txt"];
+    
+    self.resultLabel.text = @"Results have been written";
 }
 
 - (void)writeMetaDataFile:(NSString *)nameFile

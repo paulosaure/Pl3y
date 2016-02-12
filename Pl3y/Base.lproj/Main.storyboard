@@ -408,20 +408,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPv-Hv-53W">
+                                <rect key="frame" x="20" y="400" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aZB-RB-pRI" secondAttribute="trailing" constant="20" id="0il-ag-min"/>
+                            <constraint firstItem="KPv-Hv-53W" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="2yF-Ra-meA"/>
                             <constraint firstAttribute="trailing" secondItem="1wZ-Bj-bEI" secondAttribute="trailing" constant="20" id="4Qo-zi-PK6"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" id="5do-M6-JeB"/>
                             <constraint firstItem="7Sx-jG-Ffg" firstAttribute="top" secondItem="X3u-fZ-J8w" secondAttribute="bottom" constant="20" id="6bX-hW-0lh"/>
                             <constraint firstItem="7Sx-jG-Ffg" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="ACA-1J-58A"/>
+                            <constraint firstAttribute="trailing" secondItem="KPv-Hv-53W" secondAttribute="trailing" constant="20" id="GUh-jZ-fcP"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="top" id="Iir-kv-3M6"/>
                             <constraint firstItem="1wZ-Bj-bEI" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="Xv1-dS-SvG"/>
                             <constraint firstAttribute="trailing" secondItem="x0y-l7-sHD" secondAttribute="trailing" id="Y0M-1j-AHO"/>
                             <constraint firstItem="X3u-fZ-J8w" firstAttribute="top" secondItem="aZB-RB-pRI" secondAttribute="bottom" constant="20" id="Z4n-uZ-eFA"/>
                             <constraint firstItem="aZB-RB-pRI" firstAttribute="top" secondItem="1wZ-Bj-bEI" secondAttribute="bottom" constant="20" id="ZGq-7z-Vcz"/>
                             <constraint firstItem="1wZ-Bj-bEI" firstAttribute="top" secondItem="GhP-4s-l14" secondAttribute="bottom" constant="20" id="aXc-EV-svt"/>
+                            <constraint firstItem="KPv-Hv-53W" firstAttribute="top" secondItem="7Sx-jG-Ffg" secondAttribute="bottom" constant="30" id="adn-o3-0Bx"/>
                             <constraint firstAttribute="trailing" secondItem="X3u-fZ-J8w" secondAttribute="trailing" constant="20" id="asf-B9-Kj0"/>
                             <constraint firstItem="aZB-RB-pRI" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="ekd-PN-AVj"/>
                             <constraint firstAttribute="trailing" secondItem="GhP-4s-l14" secondAttribute="trailing" constant="20" id="gU6-lc-d07"/>
@@ -444,6 +453,7 @@
                         <outlet property="fromTextField" destination="aZB-RB-pRI" id="CzJ-gt-1sB"/>
                         <outlet property="initialTextField" destination="1wZ-Bj-bEI" id="MQs-x4-73z"/>
                         <outlet property="referenceTextField" destination="GhP-4s-l14" id="MMm-fI-dcT"/>
+                        <outlet property="resultLabel" destination="KPv-Hv-53W" id="fTE-tk-sdW"/>
                         <outlet property="startButton" destination="je9-uF-ZBp" id="Qwy-gP-UJG"/>
                         <outlet property="stopButton" destination="l58-yM-FyU" id="D81-3l-HGT"/>
                         <outlet property="timeLabel" destination="04K-Sn-Xfv" id="GiE-kj-rap"/>
