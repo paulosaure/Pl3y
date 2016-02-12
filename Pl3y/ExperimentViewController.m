@@ -16,6 +16,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 
+@property (weak, nonatomic) IBOutlet UITextField *referenceTextField;
+@property (weak, nonatomic) IBOutlet UITextField *initialTextField;
+@property (weak, nonatomic) IBOutlet UITextField *fromTextField;
+@property (weak, nonatomic) IBOutlet UITextField *activityTextField;
+@property (weak, nonatomic) IBOutlet UITextField *contentTextField;
+
+
 // Data
 @property (nonatomic, strong) NSMutableArray *alphaRelativeArray;
 @property (nonatomic, strong) NSMutableArray *betaRelativeArray;
@@ -104,6 +111,7 @@
     
     [self.repeatingTimer invalidate];
     self.seconde = 0;
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld", (long)self.seconde];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                       target:self
                                                     selector:@selector(increaseTimeCount:)
@@ -120,11 +128,6 @@
 }
 
 #pragma mark - Utils
-
-- (void)writeDataInJson
-{
-    
-}
 
 - (void)increaseTimeCount:(NSTimer*)theTimer
 {
@@ -143,5 +146,99 @@
     [self.repeatingTimer invalidate];
 }
 
+- (void)writeDataInJson
+{
+    [self writeMetaDataFile:@"référence_metadata.txt"];
+    [self writeConcFile:@"référence_conc.txt"];
+    [self writeMelFile:@"référence_mel.txt"];
+    [self writeAlphaFile:@"référence_alpha.txt"];
+    [self writeBetaFile:@"référence_beta.txt"];
+    [self writeDeltaFile:@"référence_delta.txt"];
+    [self writeGammaFile:@"référence_gamma.txt"];
+    [self writeThetaFile:@"référence_theta.txt"];
+}
+
+- (void)writeMetaDataFile:(NSString *)nameFile
+{
+    NSString *content = [NSString stringWithFormat:@"%@\n%@\n%@", self.initialTextField.text, self.fromTextField.text, self.activityTextField.text];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeConcFile:(NSString *)nameFile
+{
+    NSString *content = [self createSimpleArray:self.concentrationArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeMelFile:(NSString *)nameFile
+{
+    NSString *content = [self createSimpleArray:self.mellowArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeAlphaFile:(NSString *)nameFile
+{
+    NSString *content = [self createComplexArray:self.alphaRelativeArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeBetaFile:(NSString *)nameFile
+{
+    NSString *content = [self createComplexArray:self.betaRelativeArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeDeltaFile:(NSString *)nameFile
+{
+    NSString *content = [self createComplexArray:self.deltaRelativeArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeGammaFile:(NSString *)nameFile
+{
+    NSString *content = [self createComplexArray:self.gammaRelativeArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeThetaFile:(NSString *)nameFile
+{
+    NSString *content = [self createComplexArray:self.thetaRelativeArray];
+    [self writeFile:content path:nameFile];
+}
+
+- (void)writeFile:(NSString *)text path:(NSString *)path
+{
+    NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [paths objectAtIndex:0];
+    NSString *fileName = path;
+    NSString *filePath = [directory stringByAppendingPathComponent:fileName];
+    [text writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    [text writeToFile:filePath atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    [NSFileHandle fileHandleForWritingAtPath:filePath];
+    
+//    NSLog(@"Path : %@", filePath);
+}
+
+- (NSString *)createSimpleArray:(NSArray *)array
+{
+    NSMutableString *content = [[NSMutableString alloc] init];
+    for (NSInteger i = 0 ; i < [array count] ; i++)
+    {
+        [content appendString:[NSString stringWithFormat:@"%d %@\n",i ,array[i]]];
+    }
+    
+    return content;
+}
+
+- (NSString *)createComplexArray:(NSArray *)array
+{
+    NSMutableString *content = [[NSMutableString alloc] init];
+    for (NSInteger i = 0 ; i < [array count] ; i++)
+    {
+        [content appendString:[NSString stringWithFormat:@"%d %@ %@ %@ %@\n",i ,array[i][0], array[i][1], array[i][2], array[i][3]]];
+    }
+    
+    return content;
+}
 
 @end

@@ -293,7 +293,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Yd9-49-xSQ"/>
                                         </constraints>
-                                        <state key="normal" title="Start"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="startTimer:" destination="fFH-M9-qdP" eventType="touchUpInside" id="LBU-0m-6Ll"/>
                                         </connections>
@@ -303,19 +305,21 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="9th-Rg-DmQ"/>
                                         </constraints>
-                                        <state key="normal" title="Stop"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="stopTimer:" destination="fFH-M9-qdP" eventType="touchUpInside" id="FlA-C3-U8k"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04K-Sn-Xfv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04K-Sn-Xfv">
                                         <rect key="frame" x="100" y="0.0" width="400" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="je9-uF-ZBp" firstAttribute="leading" secondItem="x0y-l7-sHD" secondAttribute="leading" id="5Hd-XK-vIG"/>
                                     <constraint firstItem="04K-Sn-Xfv" firstAttribute="top" secondItem="x0y-l7-sHD" secondAttribute="top" id="Jww-XN-8a8"/>
@@ -330,22 +334,61 @@
                                     <constraint firstAttribute="bottom" secondItem="04K-Sn-Xfv" secondAttribute="bottom" id="y5D-dm-En1"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Référence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-bV-fys">
+                                <rect key="frame" x="40" y="140" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initiales" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMZ-0h-ROM">
+                                <rect key="frame" x="40" y="190" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crg-QB-gQB">
+                                <rect key="frame" x="40" y="240" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Activité" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aom-14-MZd">
+                                <rect key="frame" x="40" y="290" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contenu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-ip-4Fl">
+                                <rect key="frame" x="40" y="340" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="crg-QB-gQB" secondAttribute="trailing" constant="20" id="15z-iE-3By"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aom-14-MZd" secondAttribute="trailing" constant="20" id="2Tz-GY-tie"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" id="5do-M6-JeB"/>
-                            <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="top" id="Iir-kv-3M6"/>
+                            <constraint firstItem="aom-14-MZd" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leadingMargin" constant="20" id="6D5-p7-jTn"/>
+                            <constraint firstItem="aom-14-MZd" firstAttribute="top" secondItem="crg-QB-gQB" secondAttribute="bottom" constant="20" id="G1b-i4-EvT"/>
+                            <constraint firstItem="GxZ-bV-fys" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leadingMargin" constant="20" id="GmQ-Ud-2zQ"/>
+                            <constraint firstItem="crg-QB-gQB" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leadingMargin" constant="20" id="P7O-R6-cqf"/>
+                            <constraint firstItem="GxZ-bV-fys" firstAttribute="top" secondItem="x0y-l7-sHD" secondAttribute="bottom" constant="20" id="RDm-a7-Ahp"/>
+                            <constraint firstItem="Lhd-ip-4Fl" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leadingMargin" constant="20" id="Rb0-dP-SgT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lhd-ip-4Fl" secondAttribute="trailing" constant="20" id="U6l-SH-C6H"/>
+                            <constraint firstItem="UMZ-0h-ROM" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leadingMargin" constant="20" id="XE9-iq-ON3"/>
                             <constraint firstAttribute="trailing" secondItem="x0y-l7-sHD" secondAttribute="trailing" id="Y0M-1j-AHO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMZ-0h-ROM" secondAttribute="trailing" constant="20" id="YEb-vh-XHh"/>
+                            <constraint firstItem="crg-QB-gQB" firstAttribute="top" secondItem="UMZ-0h-ROM" secondAttribute="bottom" constant="20" id="bCA-5c-LFS"/>
+                            <constraint firstItem="Lhd-ip-4Fl" firstAttribute="top" secondItem="aom-14-MZd" secondAttribute="bottom" constant="20" id="g9T-Oy-Ixv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GxZ-bV-fys" secondAttribute="trailing" constant="20" id="jit-mQ-idH"/>
+                            <constraint firstItem="UMZ-0h-ROM" firstAttribute="top" secondItem="GxZ-bV-fys" secondAttribute="bottom" constant="20" id="mo7-FZ-VQv"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="topMargin" constant="70" id="zQq-Og-NB9"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Iir-kv-3M6"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="actionContentView" destination="x0y-l7-sHD" id="Lq1-TV-uFb"/>
+                        <outlet property="activityTextField" destination="aom-14-MZd" id="lSM-qg-42R"/>
+                        <outlet property="contentTextField" destination="Lhd-ip-4Fl" id="V7v-9e-QIJ"/>
+                        <outlet property="fromTextField" destination="crg-QB-gQB" id="QgP-fN-B7f"/>
+                        <outlet property="initialTextField" destination="UMZ-0h-ROM" id="a3t-RE-cYk"/>
+                        <outlet property="referenceTextField" destination="GxZ-bV-fys" id="3dd-po-O7l"/>
                         <outlet property="startButton" destination="je9-uF-ZBp" id="Qwy-gP-UJG"/>
                         <outlet property="stopButton" destination="l58-yM-FyU" id="D81-3l-HGT"/>
                         <outlet property="timeLabel" destination="04K-Sn-Xfv" id="GiE-kj-rap"/>
