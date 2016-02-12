@@ -208,13 +208,25 @@
 
 - (void)writeFile:(NSString *)text path:(NSString *)path
 {
+    NSError *error;
+    
+    // Get full path
     NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
     NSString *fileName = path;
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];
-    [text writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    [NSFileHandle fileHandleForWritingAtPath:filePath];
     
+    // Create file
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    [filemgr createFileAtPath:filePath contents:nil attributes: nil];
+    
+    // Write Data
+    BOOL ok = [text writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    
+    if (!ok) {
+        NSLog(@"Error writing file at %@\n%@", path, [error localizedFailureReason]);
+    }
+
 //    NSLog(@"Path : %@", filePath);
 }
 
