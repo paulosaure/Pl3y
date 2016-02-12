@@ -132,11 +132,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A8D88DFC1C6E725300217A5B = {
+		A8B85CFD1C6E7A9C008591DE /* External */ = {
 			isa = PBXGroup;
 			children = (
 				A8B85CFB1C6E76EE008591DE /* libc++.tbd */,
 				A8B85CF91C6E76E0008591DE /* libz.tbd */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		A8D88DFC1C6E725300217A5B = {
+			isa = PBXGroup;
+			children = (
 				A8D88E071C6E725300217A5B /* Pl3y */,
 				A8D88E211C6E725300217A5B /* Pl3yTests */,
 				A8D88E2C1C6E725300217A5B /* Pl3yUITests */,
@@ -157,6 +164,7 @@
 		A8D88E071C6E725300217A5B /* Pl3y */ = {
 			isa = PBXGroup;
 			children = (
+				A8B85CFD1C6E7A9C008591DE /* External */,
 				A8ED274C1C6E72DF008114D9 /* Classes */,
 				A8ED27501C6E7301008114D9 /* Resources */,
 				A8D88E081C6E725300217A5B /* Supporting Files */,

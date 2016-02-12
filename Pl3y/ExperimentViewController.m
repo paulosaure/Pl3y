@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *mellowArray;
 @property (nonatomic, strong) NSMutableArray *concentrationArray;
 
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *repeatingTimer;
 @property (nonatomic, assign) NSInteger *seconde;
 
 @end
@@ -102,15 +102,20 @@
     self.mellowArray = [NSMutableArray array];
     self.concentrationArray = [NSMutableArray array];
     
-   self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(increaseTimeCount) userInfo:nil repeats:YES];
-    self.seconde = 0;
-    [self.timer fire];
+    [self.repeatingTimer invalidate];
+    
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                      target:self
+                                                    selector:@selector(increaseTimeCount:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    self.repeatingTimer = timer;
 }
 
 
 - (IBAction)stopTimer:(id)sender
 {
-    [self.timer invalidate];
+    [self.repeatingTimer invalidate];
     [self writeDataInJson];
 }
 
@@ -121,7 +126,7 @@
     
 }
 
-- (void)increaseTimeCount
+- (void)increaseTimeCount:(NSTimer*)theTimer
 {
     self.seconde++;
     self.timeLabel.text = [NSString stringWithFormat:@"%ld", (long)self.seconde];
@@ -135,7 +140,7 @@
 
 - (void)dealloc
 {
-    [self.timer invalidate];
+    [self.repeatingTimer invalidate];
 }
 
 

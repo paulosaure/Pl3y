@@ -112,7 +112,7 @@
         <!--Pie Chart View Controller-->
         <scene sceneID="aaU-I1-013">
             <objects>
-                <viewController id="Tnh-Tt-TUL" customClass="PieChartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PieChartViewControllerID" id="Tnh-Tt-TUL" customClass="PieChartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="irS-6I-U7K"/>
                         <viewControllerLayoutGuide type="bottom" id="IJT-EF-uE8"/>

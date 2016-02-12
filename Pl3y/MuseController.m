@@ -129,13 +129,27 @@
 // This gets called by LoggingListener
 - (void)sayHi
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Muse says hi"
-                                                    message:@"Muse is now connected"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"Muse says hi"
+                                  message:@"Muse is now connected"
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes, please"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    //Handel your yes please button action here
+                                    
+                                    
+                                }];
+
+    
+    [alert addAction:yesButton];
+    
+//    [self presentViewController:alert animated:YES completion:nil];
+
     NSLog(@"Muse is Now connected");
-    [alert show];
 }
 
 - (void)reconnectToMuse
