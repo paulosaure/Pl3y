@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSMutableArray *concentrationArray;
 
 @property (nonatomic, strong) NSTimer *repeatingTimer;
-@property (nonatomic, assign) NSInteger *seconde;
+@property (nonatomic, assign) NSInteger seconde;
 
 @end
 
@@ -103,7 +103,7 @@
     self.concentrationArray = [NSMutableArray array];
     
     [self.repeatingTimer invalidate];
-    
+    self.seconde = 0;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                       target:self
                                                     selector:@selector(increaseTimeCount:)
