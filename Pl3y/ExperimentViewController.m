@@ -260,7 +260,7 @@
     NSMutableString *content = [[NSMutableString alloc] init];
     for (NSInteger i = 0 ; i < [array count] ; i++)
     {
-        [content appendString:[NSString stringWithFormat:@"%d %@\n",i ,array[i]]];
+        [content appendString:[NSString stringWithFormat:@"%ld %@\n",(long)i ,array[i]]];
     }
     
     return content;
@@ -271,7 +271,7 @@
     NSMutableString *content = [[NSMutableString alloc] init];
     for (NSInteger i = 0 ; i < [array count] ; i++)
     {
-        [content appendString:[NSString stringWithFormat:@"%d %@ %@ %@ %@\n",i ,array[i][0], array[i][1], array[i][2], array[i][3]]];
+        [content appendString:[NSString stringWithFormat:@"%ld %@ %@ %@ %@\n",(long)i ,array[i][0], array[i][1], array[i][2], array[i][3]]];
     }
     
     return content;
