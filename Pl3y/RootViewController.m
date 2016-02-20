@@ -193,11 +193,8 @@
             return  [UIColor orangeColor];
             break;
         case 3:
-            return  [UIColor redColor];
-            break;
-        case 4:
         default:
-            return [UIColor blackColor];
+            return [UIColor redColor];
             break;
     }
 }

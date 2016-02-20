@@ -83,15 +83,15 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-aX-yGX" userLabel="ConnectionView">
-                            <rect key="frame" x="450" y="7.5" width="15" height="15"/>
+                            <rect key="frame" x="450" y="7" width="15" height="15"/>
                             <color key="backgroundColor" red="1" green="0.1005161125" blue="0.074922599270000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="15" id="WCk-gD-vak"/>
                                 <constraint firstAttribute="height" constant="15" id="zxL-Hc-fS9"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isConnected :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1f-iO-Xmb">
-                            <rect key="frame" x="355" y="5" width="89.5" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1f-iO-Xmb">
+                            <rect key="frame" x="402.5" y="5" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="u1f-iO-Xmb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R5e-ea-y2g" secondAttribute="trailing" id="0ZR-uH-oGr"/>
                         <constraint firstItem="hkl-aX-yGX" firstAttribute="leading" secondItem="u1f-iO-Xmb" secondAttribute="trailing" constant="5" id="2QB-4m-7sj"/>
