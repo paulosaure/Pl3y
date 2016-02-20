@@ -436,28 +436,28 @@
                                     <constraint firstAttribute="bottom" secondItem="04K-Sn-Xfv" secondAttribute="bottom" id="y5D-dm-En1"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Référence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhP-4s-l14">
-                                <rect key="frame" x="20" y="140" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Référence Paulo" borderStyle="roundedRect" placeholder="Référence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhP-4s-l14">
+                                <rect key="frame" x="20" y="140" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZB-RB-pRI">
-                                <rect key="frame" x="20" y="240" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lieu Paulo" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZB-RB-pRI">
+                                <rect key="frame" x="20" y="240" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Activité" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-fZ-J8w">
-                                <rect key="frame" x="20" y="290" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activité Paulo" borderStyle="roundedRect" placeholder="Activité" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-fZ-J8w">
+                                <rect key="frame" x="20" y="290" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contenu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-jG-Ffg">
-                                <rect key="frame" x="20" y="340" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Content Paulo" borderStyle="roundedRect" placeholder="Contenu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-jG-Ffg">
+                                <rect key="frame" x="20" y="340" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initiales" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wZ-Bj-bEI">
-                                <rect key="frame" x="20" y="190" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Initial Paulo" borderStyle="roundedRect" placeholder="Initiales" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wZ-Bj-bEI">
+                                <rect key="frame" x="20" y="190" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -470,9 +470,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aZB-RB-pRI" secondAttribute="trailing" constant="20" id="0il-ag-min"/>
+                            <constraint firstAttribute="trailing" secondItem="aZB-RB-pRI" secondAttribute="trailing" constant="60" id="0il-ag-min"/>
                             <constraint firstItem="KPv-Hv-53W" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="2yF-Ra-meA"/>
-                            <constraint firstAttribute="trailing" secondItem="1wZ-Bj-bEI" secondAttribute="trailing" constant="20" id="4Qo-zi-PK6"/>
+                            <constraint firstAttribute="trailing" secondItem="1wZ-Bj-bEI" secondAttribute="trailing" constant="60" id="4Qo-zi-PK6"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" id="5do-M6-JeB"/>
                             <constraint firstItem="7Sx-jG-Ffg" firstAttribute="top" secondItem="X3u-fZ-J8w" secondAttribute="bottom" constant="20" id="6bX-hW-0lh"/>
                             <constraint firstItem="7Sx-jG-Ffg" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="ACA-1J-58A"/>
@@ -484,12 +484,12 @@
                             <constraint firstItem="aZB-RB-pRI" firstAttribute="top" secondItem="1wZ-Bj-bEI" secondAttribute="bottom" constant="20" id="ZGq-7z-Vcz"/>
                             <constraint firstItem="1wZ-Bj-bEI" firstAttribute="top" secondItem="GhP-4s-l14" secondAttribute="bottom" constant="20" id="aXc-EV-svt"/>
                             <constraint firstItem="KPv-Hv-53W" firstAttribute="top" secondItem="7Sx-jG-Ffg" secondAttribute="bottom" constant="30" id="adn-o3-0Bx"/>
-                            <constraint firstAttribute="trailing" secondItem="X3u-fZ-J8w" secondAttribute="trailing" constant="20" id="asf-B9-Kj0"/>
+                            <constraint firstAttribute="trailing" secondItem="X3u-fZ-J8w" secondAttribute="trailing" constant="60" id="asf-B9-Kj0"/>
                             <constraint firstItem="aZB-RB-pRI" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="ekd-PN-AVj"/>
-                            <constraint firstAttribute="trailing" secondItem="GhP-4s-l14" secondAttribute="trailing" constant="20" id="gU6-lc-d07"/>
+                            <constraint firstAttribute="trailing" secondItem="GhP-4s-l14" secondAttribute="trailing" constant="60" id="gU6-lc-d07"/>
                             <constraint firstItem="GhP-4s-l14" firstAttribute="top" secondItem="x0y-l7-sHD" secondAttribute="bottom" constant="20" id="gha-Si-vlY"/>
                             <constraint firstItem="GhP-4s-l14" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="koZ-GO-5Ro"/>
-                            <constraint firstAttribute="trailing" secondItem="7Sx-jG-Ffg" secondAttribute="trailing" constant="20" id="pp3-U9-Yfs"/>
+                            <constraint firstAttribute="trailing" secondItem="7Sx-jG-Ffg" secondAttribute="trailing" constant="60" id="pp3-U9-Yfs"/>
                             <constraint firstItem="X3u-fZ-J8w" firstAttribute="leading" secondItem="Bjf-nT-NOW" secondAttribute="leading" constant="20" id="tH1-Jy-bgm"/>
                             <constraint firstItem="x0y-l7-sHD" firstAttribute="top" secondItem="Bjf-nT-NOW" secondAttribute="topMargin" constant="70" id="zQq-Og-NB9"/>
                         </constraints>

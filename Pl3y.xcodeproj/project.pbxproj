@@ -17,7 +17,6 @@
 		A8B85CEE1C6E7668008591DE /* StateTrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CEC1C6E7668008591DE /* StateTrainingView.m */; };
 		A8B85CEF1C6E7668008591DE /* StateTrainingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B85CED1C6E7668008591DE /* StateTrainingView.xib */; };
 		A8B85CF31C6E767F008591DE /* MuseController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CF21C6E767F008591DE /* MuseController.m */; };
-		A8B85CF51C6E7684008591DE /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CF41C6E7684008591DE /* libMuse.a */; };
 		A8B85CF81C6E768D008591DE /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CF71C6E768D008591DE /* LoggingListener.m */; };
 		A8B85CFA1C6E76E0008591DE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CF91C6E76E0008591DE /* libz.tbd */; };
 		A8B85CFC1C6E76EE008591DE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CFB1C6E76EE008591DE /* libc++.tbd */; };
@@ -72,7 +71,6 @@
 		A8B85CF01C6E767F008591DE /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Muse.h; path = Pl3y/Muse.h; sourceTree = SOURCE_ROOT; };
 		A8B85CF11C6E767F008591DE /* MuseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuseController.h; path = Pl3y/MuseController.h; sourceTree = SOURCE_ROOT; };
 		A8B85CF21C6E767F008591DE /* MuseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuseController.m; path = Pl3y/MuseController.m; sourceTree = SOURCE_ROOT; };
-		A8B85CF41C6E7684008591DE /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMuse.a; path = Pl3y/Muse/libMuse.a; sourceTree = SOURCE_ROOT; };
 		A8B85CF61C6E768D008591DE /* LoggingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingListener.h; path = Pl3y/LoggingListener.h; sourceTree = SOURCE_ROOT; };
 		A8B85CF71C6E768D008591DE /* LoggingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingListener.m; path = Pl3y/LoggingListener.m; sourceTree = SOURCE_ROOT; };
 		A8B85CF91C6E76E0008591DE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -111,7 +109,6 @@
 				A8C32A661C78FB0D00B3B965 /* libMuse.a in Frameworks */,
 				A8B85CFC1C6E76EE008591DE /* libc++.tbd in Frameworks */,
 				A8B85CFA1C6E76E0008591DE /* libz.tbd in Frameworks */,
-				A8B85CF51C6E7684008591DE /* libMuse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +236,7 @@
 			children = (
 				A8ED27541C6E731A008114D9 /* BatteryIcone */,
 				A8ED275F1C6E731A008114D9 /* EchoNest */,
+				A8ED275E1C6E731A008114D9 /* Muse */,
 				A8ED27621C6E731A008114D9 /* RootAware */,
 				A8ED27661C6E731A008114D9 /* StateTrainingView */,
 			);
@@ -277,21 +275,19 @@
 		A8ED275E1C6E731A008114D9 /* Muse */ = {
 			isa = PBXGroup;
 			children = (
-				A8B85CF41C6E7684008591DE /* libMuse.a */,
 				A8B85CF01C6E767F008591DE /* Muse.h */,
 				A8B85CF11C6E767F008591DE /* MuseController.h */,
 				A8B85CF21C6E767F008591DE /* MuseController.m */,
 				A8ED275D1C6E731A008114D9 /* Listener */,
 			);
 			name = Muse;
-			path = ..;
-			sourceTree = "<group>";
+			path = Pl3yOld/Pl3y;
+			sourceTree = SOURCE_ROOT;
 		};
 		A8ED275F1C6E731A008114D9 /* EchoNest */ = {
 			isa = PBXGroup;
 			children = (
 				A8B85CE51C6E7649008591DE /* EchoNest.h */,
-				A8ED275E1C6E731A008114D9 /* Muse */,
 			);
 			name = EchoNest;
 			path = ../Pl3yOld/Pl3y/EchoNest;

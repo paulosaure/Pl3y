@@ -59,6 +59,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataNotification:) name:dataNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConcentrationNotification:) name:contentrationNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMellowNotification:) name:mellowNotification object:nil];
+    
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureRecognizer:)];
+    [self.view addGestureRecognizer:singleFingerTap];
 }
 
 - (void)handleConcentrationNotification:(NSNotification *)notification
@@ -74,7 +77,7 @@
 - (void)handleDataNotification:(NSNotification *)notification
 {
     IXNMuseDataPacket *packet = notification.object;
-    NSNumber *value = [self valueWithNotification:notification];
+    NSArray *value = packet.values;
     
     switch (packet.packetType) {
         case IXNMuseDataPacketTypeAlphaRelative:
@@ -141,6 +144,24 @@
 {
     NSArray *packet = notification.object;
     return (NSNumber *)[packet objectAtIndex:0];
+}
+
+- (CGFloat)averagePacketValue:(NSArray *)values
+{
+    NSInteger cptValideValue = 0;
+    CGFloat sumValideValue = 0;
+    for (int i = 0; i < [values count] ; i++)
+    {
+        CGFloat value = [(NSNumber *)values[i] floatValue];
+        
+        if (!isnan(value))
+        {
+            cptValideValue ++;
+            sumValideValue += value;
+        }
+    }
+    
+    return (sumValideValue/cptValideValue);
 }
 
 - (void)dealloc
@@ -254,6 +275,13 @@
     }
     
     return content;
+}
+
+#pragma mark - Utils
+
+- (void)gestureRecognizer:(UISwipeGestureRecognizer *)sender
+{
+    [self.view endEditing:YES];
 }
 
 @end
