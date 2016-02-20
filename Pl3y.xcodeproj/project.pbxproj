@@ -13,7 +13,6 @@
 		A8B85CDF1C6E7629008591DE /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CDE1C6E7629008591DE /* PieChartViewController.m */; };
 		A8B85CE31C6E7636008591DE /* BatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CE11C6E7636008591DE /* BatteryViewController.m */; };
 		A8B85CE41C6E7636008591DE /* BatteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B85CE21C6E7636008591DE /* BatteryViewController.xib */; };
-		A8B85CE71C6E7650008591DE /* libechonest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CE61C6E7650008591DE /* libechonest.a */; };
 		A8B85CEA1C6E765F008591DE /* RootAwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CE91C6E765F008591DE /* RootAwareViewController.m */; };
 		A8B85CEE1C6E7668008591DE /* StateTrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CEC1C6E7668008591DE /* StateTrainingView.m */; };
 		A8B85CEF1C6E7668008591DE /* StateTrainingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B85CED1C6E7668008591DE /* StateTrainingView.xib */; };
@@ -22,6 +21,7 @@
 		A8B85CF81C6E768D008591DE /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B85CF71C6E768D008591DE /* LoggingListener.m */; };
 		A8B85CFA1C6E76E0008591DE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CF91C6E76E0008591DE /* libz.tbd */; };
 		A8B85CFC1C6E76EE008591DE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B85CFB1C6E76EE008591DE /* libc++.tbd */; };
+		A8C32A661C78FB0D00B3B965 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C32A651C78FB0D00B3B965 /* libMuse.a */; };
 		A8D88E0A1C6E725300217A5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D88E091C6E725300217A5B /* main.m */; };
 		A8D88E0D1C6E725300217A5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D88E0C1C6E725300217A5B /* AppDelegate.m */; };
 		A8D88E131C6E725300217A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D88E111C6E725300217A5B /* Main.storyboard */; };
@@ -64,7 +64,6 @@
 		A8B85CE11C6E7636008591DE /* BatteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatteryViewController.m; path = Pl3y/BatteryViewController.m; sourceTree = SOURCE_ROOT; };
 		A8B85CE21C6E7636008591DE /* BatteryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BatteryViewController.xib; path = Pl3y/BatteryViewController.xib; sourceTree = SOURCE_ROOT; };
 		A8B85CE51C6E7649008591DE /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EchoNest.h; path = Pl3y/EchoNest.h; sourceTree = SOURCE_ROOT; };
-		A8B85CE61C6E7650008591DE /* libechonest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libechonest.a; path = Pl3y/EchoNest/libechonest.a; sourceTree = SOURCE_ROOT; };
 		A8B85CE81C6E765F008591DE /* RootAwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootAwareViewController.h; path = Pl3y/RootAwareViewController.h; sourceTree = SOURCE_ROOT; };
 		A8B85CE91C6E765F008591DE /* RootAwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootAwareViewController.m; path = Pl3y/RootAwareViewController.m; sourceTree = SOURCE_ROOT; };
 		A8B85CEB1C6E7668008591DE /* StateTrainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StateTrainingView.h; path = Pl3y/StateTrainingView.h; sourceTree = SOURCE_ROOT; };
@@ -78,6 +77,7 @@
 		A8B85CF71C6E768D008591DE /* LoggingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingListener.m; path = Pl3y/LoggingListener.m; sourceTree = SOURCE_ROOT; };
 		A8B85CF91C6E76E0008591DE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A8B85CFB1C6E76EE008591DE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A8C32A651C78FB0D00B3B965 /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMuse.a; sourceTree = SOURCE_ROOT; };
 		A8D88E051C6E725300217A5B /* Pl3y.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pl3y.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D88E091C6E725300217A5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8D88E0B1C6E725300217A5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C32A661C78FB0D00B3B965 /* libMuse.a in Frameworks */,
 				A8B85CFC1C6E76EE008591DE /* libc++.tbd in Frameworks */,
 				A8B85CFA1C6E76E0008591DE /* libz.tbd in Frameworks */,
-				A8B85CE71C6E7650008591DE /* libechonest.a in Frameworks */,
 				A8B85CF51C6E7684008591DE /* libMuse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +135,7 @@
 		A8B85CFD1C6E7A9C008591DE /* External */ = {
 			isa = PBXGroup;
 			children = (
+				A8C32A651C78FB0D00B3B965 /* libMuse.a */,
 				A8B85CFB1C6E76EE008591DE /* libc++.tbd */,
 				A8B85CF91C6E76E0008591DE /* libz.tbd */,
 			);
@@ -289,7 +290,6 @@
 		A8ED275F1C6E731A008114D9 /* EchoNest */ = {
 			isa = PBXGroup;
 			children = (
-				A8B85CE61C6E7650008591DE /* libechonest.a */,
 				A8B85CE51C6E7649008591DE /* EchoNest.h */,
 				A8ED275E1C6E731A008114D9 /* Muse */,
 			);
@@ -679,8 +679,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pl3y/EchoNest",
 					"$(PROJECT_DIR)/Pl3y/Muse",
+					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paulLavoine.pl3y.Pl3y;
+				OTHER_LDFLAGS = (
+					"-lMuse",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.MuseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -700,8 +706,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pl3y/EchoNest",
 					"$(PROJECT_DIR)/Pl3y/Muse",
+					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paulLavoine.pl3y.Pl3y;
+				OTHER_LDFLAGS = (
+					"-lMuse",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.interaxon.MuseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
