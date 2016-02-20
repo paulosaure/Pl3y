@@ -314,6 +314,9 @@
                                         <state key="normal" title="PIE CHART">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Tnh-Tt-TUL" kind="show" id="UXy-IQ-HkF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKs-4e-lMm">
                                         <rect key="frame" x="0.0" y="271" width="600" height="135.5"/>
