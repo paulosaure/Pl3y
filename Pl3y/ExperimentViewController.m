@@ -171,14 +171,16 @@
 
 - (void)writeDataInJson
 {
-    [self writeMetaDataFile:@"référence_metadata.txt"];
-    [self writeConcFile:@"référence_conc.txt"];
-    [self writeMelFile:@"référence_mel.txt"];
-    [self writeAlphaFile:@"référence_alpha.txt"];
-    [self writeBetaFile:@"référence_beta.txt"];
-    [self writeDeltaFile:@"référence_delta.txt"];
-    [self writeGammaFile:@"référence_gamma.txt"];
-    [self writeThetaFile:@"référence_theta.txt"];
+    NSString *namefile = self.referenceTextField.text ? self.referenceTextField.text : @"référence";
+    
+    [self writeMetaDataFile:[NSString stringWithFormat:@"%@_metadata.txt", namefile]];
+    [self writeConcFile:[NSString stringWithFormat:@"%@_conc.txt", namefile]];
+    [self writeMelFile:[NSString stringWithFormat:@"%@_mel.txt", namefile]];
+    [self writeAlphaFile:[NSString stringWithFormat:@"%@_alpha.txt", namefile]];
+    [self writeBetaFile:[NSString stringWithFormat:@"%@_beta.txt", namefile]];
+    [self writeDeltaFile:[NSString stringWithFormat:@"%@_delta.txt", namefile]];
+    [self writeGammaFile:[NSString stringWithFormat:@"%@_gamma.txt", namefile]];
+    [self writeThetaFile:[NSString stringWithFormat:@"%@_theta.txt", namefile]];
     
     self.resultLabel.text = @"Results have been written";
 }
